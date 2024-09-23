@@ -1,0 +1,144 @@
+/* (1366x768) WXGA Display */
+@media screen and (max-width: 1390px) {
+    .p-component {
+        font-size: 12px !important;
+    }
+    .header-title {
+        /* font-size: 18px; */
+        font-size: 14px !important;
+        letter-spacing: 0.25px;
+    }
+
+    .welcome-text {
+        /* font-size: 1.5rem; */
+        font-size: 1.15rem !important;
+    }
+    .welcome-username {
+        /* font-size: 4rem; */
+        font-size: 2.5rem !important;
+    }
+
+    .page-heading,
+    .png-page-heading p.page-heading {
+        /* font-size: 24px; */
+        font-size: 18px !important;
+    }
+
+    .form-heading,
+    .png-form-heading p.form-heading {
+        /* font-size: 18px; */
+        font-size: 16px !important;
+    }
+    .form-subheading,
+    .png-form-subheading p.form-subheading {
+        /* font-size: 16px; */
+        font-size: 13px !important;
+    }
+    .png-dialogbox.p-dialog .p-dialog-header {
+        padding-top: 0.65rem;
+        padding-bottom: 0.25rem;
+    }
+    .png-card-header h3,
+    /* font-size: 16px; */
+    .png-accordion .png-accordion-header .png-accordion-header-text,
+    .png-dialogbox.p-dialog .p-dialog-header .p-dialog-title {
+        /* font-size: 18px; */
+        font-size: 18px !important;
+    }
+    .form-field-label,
+    .png-dropdown .p-dropdown .p-dropdown-label,
+    .png-calendar .p-calendar .p-inputtext,
+    .png-dropdown .p-multiselect .p-multiselect-label,
+    .png-dropdown .p-dropdown .p-dropdown-label .form-field-label,
+    .png-input-mask .p-inputtext,
+    .png-autocomplete .p-autocomplete-input,
+    .p-password-input,
+    .png-input-number .p-inputtext,
+    .png-slider-with-input.p-inputtext,
+    .png-inputnumber-with-buttons .p-inputtext,
+    .png-input-textarea,
+    .png-inputgroup .p-inputtext,
+    .png-input-text .p-component {
+        /* font-size: 13px; */
+        font-size: 12px !important;
+    }
+    .error-message {
+        /* font-size: 12px; */
+        font-size: 11px;
+    }
+    .error-message i {
+        /* font-size: 12px; */
+        font-size: 11px !important;
+    }
+
+    .read-view-title,
+    .read-view-value-sm,
+    .read-view-title-sm,
+    .png-table .blockheader-with-text,
+    .png-table .block-with-text {
+        /* font-size: 14px; */
+        font-size: 12px !important;
+    }
+
+    .p-link,
+    .total-value-field .p-inputtext,
+    .cash-sale-items-list li p.title,
+    .cash-sale-items-list li p.value,
+    .read-view-value,
+    .png-tabview .p-tabview .p-tabview-nav li .p-tabview-nav-link {
+        /* font-size: 15px ; */
+        font-size: 13px !important;
+    }
+    .png-table .p-datatable .p-datatable-thead > tr > th,
+    .png-table .p-datatable .p-datatable-tbody > tr > td {
+        /* height: 55px; */
+        height: 45px;
+    }
+    .p-dropdown,
+    .p-dropdown-panel .p-dropdown-header .p-dropdown-filter,
+    .png-select-button .p-selectbutton,
+    .png-calendar .p-calendar {
+        /* height: 40px !important; */
+        height: 36px !important;
+    }
+    .p-dropdown-panel .p-dropdown-header,
+    .p-dropdown-panel .p-dropdown-items .p-dropdown-item {
+        /* padding: 0.75rem 1.25rem; */
+        padding: 0.5rem 1rem !important;
+    }
+    .png-tag .p-tag {
+        /* height: 28px; */
+        height: 24px !important;
+        letter-spacing: 0.5px;
+    }
+    .p-steps .p-steps-item .p-menuitem-link .p-steps-title {
+        letter-spacing: 0.25px;
+    }
+    .sectionmain {
+        margin-top: 60px !important;
+    }
+    .top-header {
+        min-height: 44px !important;
+    }
+    .sidebar-toggle-btns {
+        height: 44px !important;
+    }
+    .page-heading.fs-3rem {
+        font-size: 2.5rem !important;
+    }
+    .sidebar-heading {
+        font-size: 13px !important;
+        letter-spacing: 0.5px !important;
+    }
+    .png-dialogbox-delete-alert .delete-icon i {
+        width: 32px !important;
+        height: 32px !important;
+        font-size: 0.85rem !important;
+    }
+    .png-dialogbox-delete-alert .delete-icon h5 {
+        font-size: 16px !important;
+    }
+    .png-dialogbox-delete-alert p {
+        font-size: 13px !important;
+    }
+}

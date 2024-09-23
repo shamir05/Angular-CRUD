@@ -1,0 +1,53 @@
+<div class="png-dialog-content">
+    <div *ngIf="action == actions.delete" class="png-dialogbox-delete-alert">
+        <div class="delete-icon">
+            <i class="fas fa-exclamation-triangle"></i>
+            <h5>Delete</h5>
+        </div>
+        <p>Are you sure you want to delete this record from your list ?</p>
+    </div>
+    <form [formGroup]="cityForm">
+        <div class="row">
+            <div class="col-lg-6">
+            <app-form [label]="'City Name'">
+                <input type="text" class="png-input-text" pInputText formControlName="cityName"
+                    placeholder="Enter City Name" />
+            </app-form>
+            </div>
+            <div class="col-lg-6">
+            <app-form [label]="'Timezone'">
+                <input type="text" class="png-input-text" pInputText formControlName="timeZone"
+                    placeholder="Enter Timezone" />
+            </app-form>
+        </div>
+            <div class="col-lg-6">
+            <app-form [label]="'Country Name'">
+                <p-dropdown class="png-dropdown" appendTo="body" [autoDisplayFirst]="true" formControlName="countryName"
+                    [options]="country_name_list" optionLabel="name" [filter]="true">
+                </p-dropdown>
+            </app-form>
+        </div>
+            <div class="col-lg-6">
+            <app-form [label]="'Description'">
+                <textarea style="width: 440px;" class="png-input-textarea" rows="1" pInputTextarea
+                    formControlName="description" placeholder="Enter Description"></textarea>
+            </app-form>
+        </div>
+            <div class="col-lg-6">
+            <app-form [label]="'Status'">
+                <p-dropdown class="png-dropdown" appendTo="body" [autoDisplayFirst]="true"
+                    formControlName="inventoryStatus" [options]="status_list" optionLabel="name" [filter]="true">
+                </p-dropdown>
+            </app-form>
+            </div>
+        </div>
+        <div class="png-dialog-no-header-footer">
+            <div class="png-dailogbox-footer justify-content-end px-4">
+                <button pButton type="button" class="png-button png-button-outline" label="{{translate('Close')}}"
+                    (click)="onClose()"></button>
+                <button type="submit" *ngIf="action !== actions.view" pButton class="png-button png-button-solid"
+                    [label]="action"></button>
+            </div>
+        </div>
+    </form>
+</div>

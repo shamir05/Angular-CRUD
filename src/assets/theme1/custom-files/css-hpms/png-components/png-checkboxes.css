@@ -1,0 +1,37 @@
+.png-checkbox-item .p-checkbox-label,
+.png-checkbox + label,
+.png-radio-button + label {
+    margin-left: 4px;
+    margin-bottom: 0px;
+}
+
+.png-checkboxes-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.png-checkbox-item {
+    display: flex;
+    align-items: center;
+}
+
+.png-checkbox .p-checkbox .p-checkbox-box.p-highlight {
+    background-color: var(--primaryclr) !important;
+}
+.png-checkbox .p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box:hover {
+    border-color: var(--primaryclr) !important;
+}
+.png-checkbox .p-checkbox .p-checkbox-box.p-highlight {
+    border-color: var(--primaryclr) !important;
+    background: var(--primaryclr) !important;
+}
+
+.p-checkbox-label {
+    margin: 0 !important;
+    margin-left: 8px !important;
+    letter-spacing: 0.28px;
+    color: #89a2ae;
+    font-size: 13px;
+    font-family: "Poppins-Regular";
+}

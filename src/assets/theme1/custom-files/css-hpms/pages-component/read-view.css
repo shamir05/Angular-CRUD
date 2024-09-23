@@ -1,0 +1,37 @@
+.form-field-container-read-view {
+    margin-bottom: 16px;
+}
+
+.read-view-title-sm,
+.read-view-value-sm,
+.read-view-title,
+.read-view-value {
+    margin-bottom: 0px;
+}
+
+.read-view-title {
+    letter-spacing: 0.42px;
+    font-family: "Poppins-Regular";
+    font-size: 14px;
+    color: var(--secondary-clr-text);
+    margin-bottom: 0.15rem;
+}
+.read-view-value {
+    font-size: 15px;
+    letter-spacing: 0.48px;
+    font-family: "Poppins-Medium";
+    color: var(--primary-clr-text);
+}
+.read-view-title-sm {
+    letter-spacing: 0.42px;
+    font-size: 14px;
+    font-family: "Poppins-Regular";
+    color: var(--secondary-clr-text);
+}
+.read-view-value-sm {
+    letter-spacing: 0.42px;
+    font-size: 14px;
+    font-family: "Poppins-Medium";
+    color: var(--primary-clr-text);
+    margin-left: 0.25rem;
+}

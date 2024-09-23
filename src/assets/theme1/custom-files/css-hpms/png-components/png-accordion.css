@@ -1,0 +1,117 @@
+.png-accordion .p-accordion p-accordiontab .p-accordion-tab {
+    margin-bottom: 16px;
+    box-shadow: 0px 2px 20px #272d3b0f;
+    border-radius: 6px !important;
+}
+.png-accordion .p-accordion .p-accordion-header .p-accordion-header-link {
+    background: transparent !important;
+    padding: 0.75rem;
+    box-shadow: none !important;
+    text-decoration: none !important;
+    border: 0px !important;
+    border-bottom: 1px solid #dee2e6 !important;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    font-weight: 500;
+}
+.png-accordion .p-accordion .p-accordion-header .p-accordion-header-link .p-icon-wrapper {
+    rotate: 90deg;
+}
+.png-accordion .p-accordion .p-accordion-header.p-highlight .p-accordion-header-link .p-icon-wrapper {
+    rotate: 180deg !important;
+}
+.png-accordion .p-accordion .p-accordion-content {
+    border: 0px !important;
+}
+.png-accordion .png-accordion-header .png-accordion-header-text {
+    letter-spacing: 0.48px;
+    font-family: "Poppins-SemiBold";
+    font-size: 16px;
+    margin: 0;
+    color: var(--primary-clr-text);
+}
+.png-accordion .p-accordion .p-accordion-header .p-accordion-header-link .p-accordion-toggle-icon {
+    margin-right: initial !important;
+}
+
+/*=====  ACCORDION CASE INFORMATION NEW DESIGN  ======*/
+.custom-row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.custom-row > .col {
+    flex: 0 0 20%;
+    box-sizing: border-box;
+}
+
+.custom-row > .col:last-child {
+    margin-bottom: 0;
+}
+
+.vertical-text p {
+    /* writing-mode: vertical-lr; */
+    /* transform: rotate(180deg);
+    font-family: "Poppins-SemiBold";
+    letter-spacing: 0.28px;
+    margin: 0;
+    color: var(--primary-clr-text);
+    font-size: 16px;
+    text-align: center;
+    white-space: pre-line; */
+    transform: rotate(-90deg);
+    font-family: "Poppins-SemiBold";
+    letter-spacing: 0.28px;
+    margin: 0;
+    color: var(--primary-clr-text);
+    font-size: 16px;
+    text-align: center;
+    height: 100px;
+    max-height: 100px;
+    max-width: 100px;
+}
+
+.png-accordion.header-white .p-accordion .p-accordion-header .p-accordion-header-link {
+    background-color: #fff !important;
+}
+.png-accordion.header-white .p-accordion .p-accordion-header .read-view-value {
+    font-size: 16px !important;
+    font-family: "Poppins-SemiBold" !important;
+}
+
+/* styles.css or your component-specific CSS file */
+.move-icon-to-right .p-button-icon-left {
+    order: 2;
+    margin-left: 0.5rem;
+    font-size: 13px !important;
+}
+
+.move-icon-to-right .p-button-label {
+    order: 1;
+}
+.pngcard-less-padd .p-card .p-card-body {
+    padding: 0.75rem !important;
+}
+.pngcard-less-padd .p-card .p-card-content {
+    padding: 0 !important;
+}
+.pngcard-less-padd .custom-row {
+    margin-left: -40px;
+}
+
+/* =====  used in bundle packages in HPMS {accordion with border and arrow at left side)  ====== */
+.png-accordion.border-arr-left .p-accordion .p-accordion-header .p-accordion-header-link {
+    flex-direction: unset;
+    justify-content: unset;
+    border: 1px solid #dee2e6 !important;
+}
+.png-accordion.border-arr-left .p-accordion .p-accordion-content {
+    border: 1px solid #dee2e6 !important;
+    border-top: 0 !important;
+    padding: 1rem;
+}
+
+#png-dialog-bundles .png-tag .p-tag {
+    display: inline-flex !important;
+}

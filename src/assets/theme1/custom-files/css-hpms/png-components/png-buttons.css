@@ -1,0 +1,204 @@
+.png-button.png-button-solid,
+.png-button.png-button-outline,
+.png-button.png-button-solid-danger,
+.png-button.png-button-outline-danger,
+.png-button .p-button {
+    padding: 0.25rem 1.25rem;
+    font-size: 13px;
+    font-family: "Poppins-Medium";
+    letter-spacing: 0.42px;
+    text-transform: capitalize;
+    border-radius: 8px;
+    justify-content: center;
+}
+.png-button {
+    margin-right: 12px;
+    margin-left: 8px !important;
+}
+.png-button:last-child {
+    margin-right: 0px;
+}
+.png-button .p-button-label {
+    font-weight: 200 !important;
+}
+.png-button.png-button-solid {
+    background: var(--primaryclr) !important;
+    border: 1px solid var(--primaryclr) !important;
+}
+
+.png-button.png-button-outline {
+    background-color: #fff !important;
+    color: var(--primaryclr) !important;
+    border: 1px solid var(--primaryclr) !important;
+}
+.png-button.png-button-outline.p-button:enabled:hover {
+    background-color: var(--primaryclr) !important;
+    color: #fff !important;
+    border: 1px solid var(--primaryclr) !important;
+}
+
+.png-button-outline .p-button {
+    background-color: transparent;
+    color: var(--primaryclr) !important;
+    border: 1px solid var(--primaryclr) !important;
+}
+.png-button-outline:hover .p-button {
+    background: var(--primaryclr) !important;
+    color: #fff !important;
+    border: 1px solid var(--primaryclr) !important;
+}
+
+/* rounded buttons */
+.png-button-rounded {
+    width: 28px !important;
+    height: 28px !important;
+    min-width: 28px !important;
+    min-height: 28px !important;
+    margin-left: 12px !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+.png-button-rounded .p-button-icon {
+    font-size: 12px !important;
+}
+
+.png-button-rounded.icon-lg {
+    width: 2.25rem !important;
+    height: 2.25rem !important;
+    min-width: 2.25rem !important;
+    min-height: 2.25rem !important;
+}
+.png-button-rounded.icon-lg .p-button-icon {
+    font-size: 18px !important;
+}
+
+.png-button.png-button-solid:first-child {
+    margin-left: 0px !important;
+}
+
+/* added css 30 may 2023 */
+/* link button css  */
+.png-link-button .p-button.p-button-link {
+    color: var(--primaryclr) !important;
+}
+.png-link-button .p-button.p-button-link .p-button-label {
+    font-weight: 200 !important;
+}
+
+/* added CSS for buttons selector margins 
+    07 JUNE 2023
+*/
+
+.footer-add-below select-solid-button {
+    margin-left: 12px;
+}
+
+/* buttons danger added 13 june 2023  */
+
+.png-button.png-button-solid-danger {
+    background-color: #e12d39 !important;
+    color: #fff !important;
+    border: 1px solid #e12d39 !important;
+}
+
+.png-button.png-button-outline-danger {
+    background-color: #fff !important;
+    color: #e12d39 !important;
+    border: 1px solid #e12d39 !important;
+}
+.png-button.png-button-outline-danger.p-button:enabled:hover {
+    background-color: #e12d39 !important;
+    color: #fff !important;
+    border: 1px solid #e12d39 !important;
+}
+
+/* for HPMS and VHS buttons generic form components space between buttons 
+    16 JUNE 2023
+*/
+
+.png-card-header-btns select-out-line-button, 
+.png-card-header-btns select-solid-button,
+.png-card-header-btns select--out-line-button,
+.footer-add-below select-solid-button,
+.png-dailogbox-footer select-out-line-button,
+.png-dailogbox-footer select-solid-button,
+
+/* added later on 20 june 2023 */
+.footer-buttons select-solid-button {
+    margin-left: 12px;
+}
+
+.footer-non-sticky,
+.footer-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 16px;
+}
+
+/* button solid having just icon 17 june 2023 sunday */
+.png-button-solid.png-button-solid-secondary {
+    background-color: var(--secondary-clr-text) !important;
+}
+.png-button-icon-solid .p-button {
+    padding: 0.25rem 0.5rem !important;
+    width: 2rem !important;
+    height: 2rem !important;
+    background: var(--primaryclr) !important;
+}
+
+/* split button added for HPMS  
+    21 JUNE 2023
+*/
+.png-button.png-split-button .p-splitbutton .p-splitbutton-defaultbutton,
+.png-button.png-split-button .p-splitbutton-menubutton {
+    padding: 0.25rem 1.25rem;
+    font-size: 13px;
+    font-family: "Poppins-Medium";
+    letter-spacing: 0.42px;
+    text-transform: capitalize;
+    border-radius: 8px;
+    justify-content: center;
+    background: var(--primaryclr) !important;
+    border: 1px solid var(--primaryclr) !important;
+}
+.png-button.png-split-button .p-splitbutton .p-splitbutton-defaultbutton {
+    border-top-right-radius: 0px !important;
+    border-bottom-right-radius: 0px;
+    border-right: 1px solid rgb(255, 255, 255, 0.3) !important;
+}
+.png-button.png-split-button .p-splitbutton-menubutton {
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px;
+}
+
+/* secondary button without any border and BG color added  */
+.png-button-text.p-button.p-button-secondary {
+    padding: 0.5rem 1.25rem;
+    font-size: 13px;
+    font-family: "Poppins-Medium";
+    letter-spacing: 0.42px;
+    text-transform: capitalize;
+    border-radius: 6px;
+    justify-content: center;
+    box-shadow: none !important;
+}
+
+/*----------  Full width border button  ----------*/
+.png-button-dashed-fw {
+    background-color: transparent !important;
+    border: 2px dashed #0000000f !important;
+    color: var(--primaryclr) !important;
+    cursor: pointer !important;
+    width: 100% !important;
+    justify-content: center;
+    padding: 1rem;
+}
+.png-button-dashed-fw .p-button-label {
+    font-weight: 500 !important;
+    flex: unset !important;
+}
+.png-button-dashed-fw .pi {
+    font-size: 13px !important;
+}

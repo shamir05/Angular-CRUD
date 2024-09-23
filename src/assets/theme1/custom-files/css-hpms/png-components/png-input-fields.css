@@ -1,0 +1,108 @@
+.png-input-mask .p-inputtext,
+.png-autocomplete .p-autocomplete-input,
+.p-password-input,
+.png-input-number .p-inputtext,
+.png-slider-with-input.p-inputtext,
+.png-inputnumber-with-buttons .p-inputtext,
+.png-input-textarea,
+.png-inputgroup .p-inputtext,
+.png-input-text {
+    border: 1px solid #1c415b80 !important;
+    color: var(--primary-clr-text) !important;
+    font-family: "Poppins-Medium" !important;
+    font-size: 13px !important;
+    border-radius: 4px !important;
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+    letter-spacing: 0.28px;
+}
+
+.png-inputnumber-with-buttons .p-inputtext {
+    border-radius: 0px !important;
+}
+.png-inputnumber-with-buttons .p-inputnumber-buttons-horizontal {
+    height: 42px !important;
+}
+
+.png-input-textarea {
+    min-height: 38px !important;
+    position: relative;
+}
+
+.png-input-password .p-icon-wrapper {
+    cursor: pointer;
+}
+
+/* addded for only textarea error height issue */
+select-text-field-textarea app-form-validation-error-message {
+    display: block;
+    margin-top: -6px;
+}
+
+/* added input group css 14 june 2023 */
+.p-inputgroup.png-inputgroup {
+    height: 40px !important;
+}
+
+.p-inputgroup.png-inputgroup .p-inputtext {
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+}
+
+/* input swtich css 16 june 2023 */
+.png-input-switch .p-inputswitch {
+    display: block;
+}
+.png-input-switch .p-inputswitch {
+    height: 1.5rem !important;
+}
+.png-input-switch .p-inputswitch .p-inputswitch-slider:before {
+    width: 1rem !important;
+    height: 1rem !important;
+    margin-top: -8px !important;
+}
+
+.png-input-switch-wrapper {
+    display: flex;
+    align-items: center;
+}
+.png-input-switch-label {
+    margin: 0px;
+}
+
+/* inline switch  */
+.png-input-switch-inline {
+    display: flex;
+    align-items: center;
+}
+.png-input-switch-inline label {
+    margin: 0;
+    margin-left: 12px;
+}
+
+/* new added for click function 11 SEP 2023 to make click on div  */
+.png-autocomplete-click .p-autocomplete-panel .p-autocomplete-items .p-autocomplete-item {
+    padding: 0 !important;
+}
+.png-autocomplete-click .p-autocomplete-panel .p-autocomplete-items .p-autocomplete-item .png-autocomplete-click-div {
+    padding: 0.75rem 1.25rem !important;
+}
+
+/*=====  Remove arrows from input type number   ======*/
+/* For Firefox */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* For Chrome, Safari, and Opera */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+@-moz-document url-prefix() {
+    textarea {
+        height: 5em;
+    }
+}

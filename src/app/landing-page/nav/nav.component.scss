@@ -1,0 +1,28 @@
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #1782CF;
+    color: white;
+    padding: 8px;
+    margin-bottom: 30px;
+}
+.nav-lists ul{
+    display: flex;
+    gap: 30px;
+    margin-right: 50px;
+    padding-top: 10px;
+}
+
+.nav-lists ul li{
+    list-style: none;
+}
+.nav-lists ul li a{
+    color: white;
+    font-size: 1.1rem;
+    text-decoration: none;
+    cursor: pointer;
+}
+.nav-lists ul li a:hover{
+    color: rgb(147, 206, 251);
+}

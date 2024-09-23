@@ -1,0 +1,57 @@
+<p-card styleClass="png-card">
+    <div class="png-card-header">
+        <h3 class="png-card-title">Organization</h3>
+        <div class="png-card-header-content align-items-start">
+            <div class="png-card-header-btns">
+                <button pButton pRipple class="png-button png-button-outline" label="Search"></button>
+                <button pButton pRipple label="Add" class="png-button png-button-solid"
+                    (click)="showOrganizationForm(Eactions.add)"></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="png-card-body">
+        <div class="png-table-container">
+            <p-table [columns]="cols" [value]="showOrganization"
+                currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" [paginator]="true"
+                [showCurrentPageReport]="true" [rowsPerPageOptions]="[10, 20, 50]" [rows]="10"
+                paginatorDropdownAppendTo="body" class="png-table">
+                <ng-template pTemplate="header" let-columns>
+                    <tr>
+                        <th *ngFor="let col of columns">
+                            <div class="blockheader-with-text"> {{ col.header }}</div>
+                        </th>
+                        <th>
+                            <div class="blockheader-with-text"> Status </div>
+                        </th>
+                        <th class="text-center">
+                            <div class="blockheader-with-text"> Action</div>
+                        </th>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-rowData let-columns="columns">
+                    <tr>
+                        <td *ngFor="let col of columns">
+                            <div class="block-with-text"> {{ rowData[col.field] }} </div>
+                        </td>
+                        <td>
+                            <div class="block-with-text">
+                                <p-tag [value]="rowData.inventoryStatus" class="png-tag"
+                                    [severity]="getSeverity(rowData.inventoryStatus)"></p-tag>
+                            </div>
+                        </td>
+                        <td class="text-center">
+                            <div class="png-table-actions">
+                                <button (click)="menu.toggle($event)" pButton pRipple type="button"
+                                    icon="pi pi-ellipsis-v"
+                                    class="png-button-rounded p-button-rounded p-button-text"></button>
+                                    <p-menu #menu [popup]="true" appendTo="body" styleClass="pngDropdownMenu" [model]="getMenuItems(rowData)"></p-menu>
+                            </div>
+                        </td>
+                    </tr>
+                </ng-template>
+            </p-table>
+        </div>
+
+    </div>
+</p-card>

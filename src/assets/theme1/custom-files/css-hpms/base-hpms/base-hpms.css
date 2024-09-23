@@ -1,0 +1,331 @@
+html,
+body,
+.wrapper,
+.wrapper-layout {
+    height: 100%;
+    background: #f1f4f6;
+}
+
+.wrapper,
+.content-header,
+.content,
+.content-wrapper,
+.mat-drawer-content {
+    background: #f1f4f6;
+}
+
+.sectionmain {
+    margin: 16px;
+    margin-top: 80px;
+    padding-bottom: 20px;
+}
+
+.png-panel {
+    display: block;
+    background: #fff;
+}
+
+.png-card .p-card-content {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+}
+
+.p-card {
+    box-shadow: 0px 2px 20px #272d3b0f !important;
+}
+.png-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.png-card-header h3 {
+    letter-spacing: 0.32px;
+    color: #1c415b;
+    font-size: 16px;
+    font-family: "Poppins-SemiBold";
+    margin: 0;
+}
+
+.png-card-footer {
+    text-align: right;
+}
+
+/* new added 24 may 2023 */
+
+.png-card-header-content {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.png-filter-chips {
+    display: flex;
+    align-items: center;
+}
+
+.png-chips-filters {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.png-filter-chips .png-chip .p-chip {
+    padding: 0.15rem 0.75rem !important;
+    background-color: #dee2e666 !important;
+}
+
+.png-chip .p-chip .chip-value,
+.png-chip .p-chip .chip-title {
+    font-size: 12px;
+    font-weight: 200;
+    text-align: left;
+}
+
+.png-chip .p-chip .chip-title {
+    font-family: "Poppins-Medium";
+    margin-right: 2px;
+}
+
+.png-chip .p-chip .chip-value {
+    font-family: "Poppins-Regular";
+}
+
+.closebtn.clear-all-chips {
+    cursor: pointer;
+}
+
+.closebtn.clear-all-chips .p-chip {
+    background: transparent !important;
+    color: var(--primaryclr) !important;
+}
+
+.closebtn.clear-all-chips .p-chip .pi-times-circle {
+    margin-left: 4px;
+}
+
+/*
+CUSTOM SCROLL BAR
+added 07 JUNE 2023  */
+
+/* width */
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 3px;
+}
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background: #cccccc;
+    border-radius: 3px;
+}
+
+/* scroll fix in firefox */
+
+.p-dropdown-items-wrapper,
+.p-sidebar .p-sidebar-header + .p-sidebar-content,
+.p-dialog .p-dialog-content,
+:root {
+    scrollbar-width: thin !important;
+    scrollbar-color: #dfeaef #f2fafe;
+}
+
+p.png-text-info {
+    color: var(--secondary-clr-text);
+    letter-spacing: 0.28px;
+    font-size: 14px;
+    font-family: "Poppins-Regular";
+    margin: 0;
+}
+
+/* issue is fixed Bug #24343 calendar size should be consistent */
+
+.p-datepicker {
+    min-width: auto !important;
+}
+
+/*=============================================
+=            vertical lines added in tabs CASH SALE            =
+=============================================*/
+
+.vertical-divs-container {
+    display: flex;
+}
+
+.vertical-leftdiv,
+.vertical-rightdiv {
+    flex: 1;
+}
+
+.three-one-division .vertical-leftdiv {
+    flex: 4;
+}
+
+.vertical-divs-seprator {
+    width: 1px;
+    /* Width of the vertical vertical-divs-seprator */
+    background-color: #91a5c4;
+    /* Color of the vertical-divs-seprator */
+    margin: 0 20px;
+    /* Spacing between the vertical-divs-seprator and the divs */
+}
+
+/* Media query for mobile devices */
+
+@media (max-width: 768px) {
+    .vertical-divs-container {
+        flex-direction: column;
+    }
+    .vertical-leftdiv,
+    .vertical-rightdiv {
+        flex: none;
+        width: 100%;
+    }
+    .vertical-divs-seprator {
+        height: 2px;
+        /* Height of the horizontal vertical-divs-seprator on mobile */
+        width: 80%;
+        /* Width of the horizontal vertical-divs-seprator on mobile */
+        margin: 10px auto;
+        /* Center the vertical-divs-seprator horizontally */
+    }
+}
+
+/*=====  End of vertical lines added in tabs CASH SALE  ======*/
+
+/* case workflow styling includes here  */
+
+.workflow-blocks .p-button,
+.workflow-blocks .p-button:hover {
+    width: 100% !important;
+    height: 100% !important;
+    background: #fff !important;
+    color: #738c9c !important;
+    border: 2px solid transparent !important;
+    box-shadow: 3px 0px 20px #00000014 !important;
+    border-radius: 4px !important;
+    -webkit-border-radius: 4px !important;
+    -moz-border-radius: 4px !important;
+    -ms-border-radius: 4px !important;
+    -o-border-radius: 4px !important;
+    margin-bottom: 0.5rem !important;
+    padding: 0.25rem 0.45rem !important;
+}
+
+.workflow-blocks .p-btn-card.solid .p-button:hover,
+.workflow-blocks .p-btn-card.solid.active .p-button {
+    border: 2px solid var(--primaryclr) !important;
+}
+
+.workflow-blocks .p-button h4 {
+    font-size: 1.5rem !important;
+    font-family: "Poppins-SemiBold" !important;
+    letter-spacing: 0.46px !important;
+    margin: 0 !important;
+    color: var(--primary-clr-text) !important;
+}
+
+.workflow-blocks .p-button p {
+    color: #92a5b2 !important;
+    font-family: "Poppins-Regular" !important;
+    font-size: 13px !important;
+    margin-left: 0.25rem !important;
+    text-align: left;
+}
+
+.workflow-blocks .icon-box {
+    height: 2rem !important;
+    min-height: 2rem !important;
+    width: 2rem !important;
+    min-width: 2rem !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    -webkit-border-radius: 50% !important;
+    -moz-border-radius: 50% !important;
+    -ms-border-radius: 50% !important;
+    -o-border-radius: 50% !important;
+}
+
+.workflow-blocks .icon-box .icon {
+    font-size: 1rem !important;
+}
+
+.workflow-blocks .icon-box.danger {
+    background-color: #fce9eb !important;
+}
+
+.workflow-blocks .icon-box.danger .icon,
+.workflow-blocks .icon-box.danger .pi {
+    color: #e12d39 !important;
+}
+
+.workflow-blocks .icon-box.success {
+    background-color: #edf7f1 !important;
+}
+
+.workflow-blocks .icon-box.success .icon,
+.workflow-blocks .icon-box.success .pi {
+    color: #53b175 !important;
+}
+
+.workflow-blocks .icon-box.warning {
+    background-color: #fff8e5 !important;
+}
+
+.workflow-blocks .icon-box.warning .icon,
+.workflow-blocks .icon-box.warning .pi {
+    color: #ffbd00 !important;
+}
+
+.cash-sale-items-list li p.title,
+.cash-sale-items-list li p.value {
+    color: var(--secondary-clr-text);
+    font-size: 16px !important;
+    font-family: "Poppins-Regular";
+    letter-spacing: 0.54px;
+}
+
+.cash-sales-rightside-content .form-subheading {
+    font-family: "Poppins-SemiBold";
+    letter-spacing: 0.54px;
+}
+
+.total-value-field .p-inputtext {
+    font-size: 16px !important;
+    text-align: right !important;
+    font-family: "Poppins-SemiBold" !important;
+    letter-spacing: 0.54px;
+}
+
+/* ////////// duplicate dialog open to block body scroll (compile-lleter-progress-dialog) ///////// */
+
+.p-overflow-hidden-body-scroll {
+    overflow: hidden;
+}
+
+.summary-fixed-section {
+    overflow: auto;
+    position: fixed !important;
+    width: 45%;
+    height: calc(60% - 50px);
+}
+
+@media only screen and (max-width: 1380px) {
+    .summary-fixed-section {
+        height: calc(55% - 50px);
+    }
+}

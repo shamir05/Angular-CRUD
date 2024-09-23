@@ -1,0 +1,217 @@
+.png-toast.p-toast .p-toast-message .p-toast-message-content .p-toast-detail {
+    letter-spacing: 0.19px;
+    font-size: 13px;
+    font-family: "Poppins-Regular";
+    margin: 0 !important;
+}
+.png-toast.p-toast .p-toast-message .p-toast-message-content {
+    align-items: center;
+}
+.png-toast.p-toast .p-toast-message .p-toast-message-content .p-toast-message-icon .p-icon-wrapper {
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.png-toast.p-toast .p-toast-message .p-toast-message-content .p-toast-message-icon {
+    font-size: 1rem !important;
+    color: #fff !important;
+}
+
+.png-toast.p-toast .p-toast-message .p-toast-message-content .p-icon:not(.p-toast-icon-close-icon) {
+    width: 1.2rem !important;
+    height: 1.2rem !important;
+}
+
+/* success toaster  */
+.png-toast.p-toast .p-toast-message.p-toast-message-success {
+    background: #e4f3e9 !important;
+}
+.png-toast.p-toast .p-toast-message.p-toast-message-success .p-icon-wrapper:not(.p-toast-icon-close .p-icon-wrapper) {
+    background: #53b175 !important;
+}
+.png-toast.p-toast .p-toast-message.p-toast-message-success {
+    border: solid #53b175 !important;
+    color: #53b175 !important;
+    border-width: 0 0 0 6px !important;
+}
+
+/* info toaster  */
+.png-toast.p-toast .p-toast-message.p-toast-message-info {
+    background: #dcecf8 !important;
+}
+.png-toast.p-toast .p-toast-message.p-toast-message-info .p-icon-wrapper:not(.p-toast-icon-close .p-icon-wrapper) {
+    background: #1782cf !important;
+}
+.png-toast.p-toast .p-toast-message.p-toast-message-info {
+    border: solid #1782cf !important;
+    color: #1782cf !important;
+    border-width: 0 0 0 6px !important;
+}
+
+/* warning toaster  */
+.png-toast.p-toast .p-toast-message.p-toast-message-warn {
+    background: #fdf2df !important;
+}
+.png-toast.p-toast .p-toast-message.p-toast-message-warn .p-icon-wrapper:not(.p-toast-icon-close .p-icon-wrapper) {
+    background: #f0a92d !important;
+}
+.png-toast.p-toast .p-toast-message.p-toast-message-warn {
+    border: solid #f0a92d !important;
+    color: #f0a92d !important;
+    border-width: 0 0 0 6px !important;
+}
+
+/* error toaster  */
+.png-toast.p-toast .p-toast-message.p-toast-message-error {
+    background: #fbdfe1 !important;
+}
+.png-toast.p-toast .p-toast-message.p-toast-message-error .p-icon-wrapper:not(.p-toast-icon-close .p-icon-wrapper) {
+    background: #e12d39 !important;
+}
+.png-toast.p-toast .p-toast-message.p-toast-message-error {
+    border: solid #e12d39 !important;
+    color: #e12d39 !important;
+    border-width: 0 0 0 6px !important;
+}
+
+/* css added for badges P-TAGS 
+            09 JUNE 2023
+*/
+.png-tag .p-tag {
+    min-width: 100px;
+    height: 28px;
+    font-weight: 300;
+    letter-spacing: 0.24px;
+    font-size: 12px !important;
+    border-radius: 4px !important;
+    font-family: "Poppins-Regular" !important;
+    /* max-width: 160px; */
+    max-width: 220px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    text-align: center;
+}
+
+.png-tag .p-tag.p-tag-info {
+    background-color: #e5f7f9 !important;
+    color: #00b2c4 !important;
+}
+
+.png-tag .p-tag.p-tag-warning {
+    color: #dc9a47 !important;
+    background-color: #fbf5ec !important;
+}
+
+.png-tag .p-tag.p-tag-success {
+    background-color: #edf7f1 !important;
+    color: #53b175 !important;
+}
+
+.png-tag .p-tag.p-tag-danger {
+    background-color: #fceaeb !important;
+    color: #e12d39 !important;
+}
+
+/* purple tag use for ONHOLD status in approval management screen  */
+.png-tag.png-tag-purple .p-tag.p-tag-info {
+    background-color: #f9edf8 !important;
+    color: #c94bb8 !important;
+}
+
+.png-tag.png-tag-secondary .p-tag.p-tag-info {
+    background-color: #e8e8e8 !important;
+    color: #211d1d !important;
+}
+.png-tag.png-tag-secondary-light .p-tag.p-tag-info {
+    background-color: #f9f9f9 !important;
+    color: #676666 !important;
+}
+.png-tag.png-tag-blue .p-tag.p-tag-info {
+    background-color: #f5f9fc !important;
+    color: #006cb7 !important;
+}
+.png-tag.png-tag-warning-light .p-tag.p-tag-info {
+    background-color: #fff7e5 !important;
+    color: #feb204 !important;
+}
+.png-tag.png-tag-pink .p-tag.p-tag-info {
+    background-color: #fef9fa !important;
+    color: #d65e80 !important;
+}
+
+.png-tag.png-tag-green-dark .p-tag.p-tag-info {
+    background-color: #eef7f0 !important;
+    color: #3c7a49 !important;
+}
+
+/* new add for toaster 16 july 2023  */
+.p-toast .p-toast-message .p-toast-message-content .p-toast-summary {
+    display: none !important;
+}
+.p-toast .p-toast-message .p-toast-message-content .p-toast-message-icon {
+    display: flex !important;
+}
+.p-toast .p-toast-message .p-toast-message-content .p-toast-detail {
+    margin: 0 !important;
+}
+.p-toast-message-content {
+    align-items: center !important;
+}
+.p-toast .p-toast-message .p-toast-message-content .p-icon:not(.p-toast-icon-close-icon) {
+    width: 1.5rem !important;
+    height: 1.5rem !important;
+}
+
+/* .p-toast-message .p-toast-message-content {
+    background: #fff !important;
+} */
+.p-toast .p-toast-message .p-toast-message-content .p-toast-detail {
+    color: var(--secondary-clr-text) !important;
+}
+.p-toast .p-toast-message .p-toast-icon-close {
+    /* background: #e0e5e9 !important; */
+    min-width: 1.5rem !important;
+    min-height: 1.5rem !important;
+    width: 1.5rem !important;
+    height: 1.5rem !important;
+}
+.p-toast .p-toast-message .p-toast-icon-close .p-icon {
+    width: 0.75rem !important;
+    height: 0.75rem !important;
+    color: var(--primary-clr-text) !important;
+}
+
+.p-toast .p-toast-message.p-toast-message-error {
+    border: solid #e12d39 !important;
+    border-width: 0 0 0 4px !important;
+    color: #e12d39 !important;
+}
+.p-toast .p-toast-message.p-toast-message-error .p-toast-message-icon {
+    color: #e12d39 !important;
+}
+.p-toast .p-toast-message.p-toast-message-info {
+    /* border: solid #00b2c4 !important;
+    border-width: 0 0 0 4px !important;
+    color: #00b2c4 !important; */
+}
+.p-toast .p-toast-message.p-toast-message-info .p-toast-message-icon {
+    /* color: #00b2c4 !important; */
+}
+.p-toast .p-toast-message.p-toast-message-warn {
+    border: solid #ffb400 !important;
+    border-width: 0 0 0 4px !important;
+    color: #ffb400 !important;
+}
+.p-toast .p-toast-message.p-toast-message-warn .p-toast-message-icon {
+    color: #ffb400 !important;
+}
+.p-toast .p-toast-message.p-toast-message-success {
+    border: solid #53b175 !important;
+    border-width: 0 0 0 4px !important;
+    color: #53b175 !important;
+}
+.p-toast .p-toast-message.p-toast-message-success .p-toast-message-icon {
+    color: #53b175 !important;
+}

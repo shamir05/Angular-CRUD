@@ -1,0 +1,167 @@
+/*=====  Theme text colors and Background colors  ======*/
+.prm-clr {
+    color: var(--primaryclr) !important;
+}
+.sec-clr {
+    color: var(--secondaryclr) !important;
+}
+.prm-clr-text {
+    color: var(--primary-clr-text) !important;
+}
+.prm-clr-dark-text {
+    color: var(--primary-clr-dark-text) !important;
+}
+.sec-clr-text {
+    color: var(--secondary-clr-text) !important;
+}
+
+.prm-bg-clr {
+    background-color: var(--primaryclr) !important;
+}
+.sec-bg-clr {
+    background-color: var(--secondaryclr) !important;
+}
+.prm-bg-clr-text {
+    background-color: var(--primary-clr-text) !important;
+}
+.sec-bg-clr-text {
+    background-color: var(--secondary-clr-text) !important;
+}
+
+.bg-light-blue {
+    background-color: #f5fafd !important;
+}
+
+/*=====  Font Families classes  ======*/
+.ff-poppins-light {
+    font-family: "Poppins-Light" !important;
+}
+.ff-poppins-regular {
+    font-family: "Poppins-Regular" !important;
+}
+.ff-poppins-semibold {
+    font-family: "Poppins-SemiBold" !important;
+}
+.ff-poppins-bold {
+    font-family: "Poppins-Bold" !important;
+}
+.ff-poppins-medium {
+    font-family: "Poppins-Medium" !important;
+}
+/*=====  Font Sizes classes  ======*/
+.fs-11px {
+    font-size: 11px !important;
+}
+.fs-12px {
+    font-size: 12px !important;
+}
+.fs-13px {
+    font-size: 13px !important;
+}
+.fs-14px {
+    font-size: 14px !important;
+}
+
+.fs-1rem {
+    font-size: 1rem !important;
+}
+.fs-1-25rem {
+    font-size: 1.25rem !important;
+}
+
+.fs-2rem {
+    font-size: 2rem !important;
+}
+.fs-2-25rem {
+    font-size: 2.25rem !important;
+}
+.fs-2-5rem {
+    font-size: 2.5rem !important;
+}
+.fs-3rem {
+    font-size: 3rem !important;
+}
+.fs-4rem {
+    font-size: 4rem !important;
+}
+.fs-5rem {
+    font-size: 5rem !important;
+}
+
+/*=====  Width classes  ======*/
+
+.w-100px {
+    width: 100px !important;
+}
+.w-200px {
+    width: 200px !important;
+}
+.w-300px {
+    width: 300px !important;
+}
+.w-400px {
+    width: 400px !important;
+}
+.w-500px {
+    width: 500px !important;
+}
+
+.w-20 {
+    width: 20%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.w-40 {
+    width: 40%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.w-60 {
+    width: 60%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.w-80 {
+    width: 80%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+/*=====  Letter Spacing Classes  ======*/
+
+.let-space-sm {
+    letter-spacing: 0.24px;
+}
+.let-space-md {
+    letter-spacing: 0.36px;
+}
+.let-space-lg {
+    letter-spacing: 0.5px;
+}
+.let-space-xl {
+    letter-spacing: 1px;
+}
+
+.flex-equal {
+    flex: 1 !important;
+}
+
+.vr {
+    display: inline-block;
+    align-self: stretch;
+    width: 1px;
+    min-height: 1em;
+    background-color: currentColor;
+    opacity: 0.25;
+}
+.shadow-sm {
+    box-shadow: 0px 1px 45px #2c3f500a !important;
+}
+
+.text-danger {
+    color: #e12d39 !important;
+}
+
+.mt-2px {
+    margin-top: 2px !important;
+}

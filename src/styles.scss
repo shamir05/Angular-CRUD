@@ -1,1 +1,70 @@
 /* You can add global styles to this file, and also import other style files */
+@import './assets/bootstrap/css/bootstrap-5-utilities.css';
+@import './assets/bootstrap/css/bootstrap.css';
+@import './assets/bootstrap/css/customs-utilitites.css';
+
+
+@import './assets/theme1/custom-files/css-hpms/base-hpms/base-hpms.css';
+@import './assets/theme1/custom-files/css-hpms/base-hpms/font-families.css';
+@import './assets/theme1/custom-files/css-hpms/base-hpms/form-generic.css';
+
+@import './assets/theme1/custom-files/css-hpms/login-files/login.css';
+
+@import './assets/theme1/custom-files/css-hpms/media-css/desktop-small-1366px.css';
+
+@import './assets/theme1/custom-files/css-hpms/pages-component/blocks-tiles.css';
+@import './assets/theme1/custom-files/css-hpms/pages-component/pdf-docs.css';
+@import './assets/theme1/custom-files/css-hpms/pages-component/read-view.css';
+
+@import './assets/theme1/custom-files/css-hpms/png-components/png-accordion.css';
+@import './assets/theme1/custom-files/css-hpms/png-components/png-buttons.css';
+@import './assets/theme1/custom-files/css-hpms/png-components/png-checkboxes.css';
+@import './assets/theme1/custom-files/css-hpms/png-components/png-dialogbox.css';
+@import './assets/theme1/custom-files/css-hpms/png-components/png-dropdown.css';
+@import './assets/theme1/custom-files/css-hpms/png-components/png-fileupload.css';
+@import './assets/theme1/custom-files/css-hpms/png-components/png-input-fields.css';
+@import './assets/theme1/custom-files/css-hpms/png-components/png-radiobutton.css';
+@import './assets/theme1/custom-files/css-hpms/png-components/png-slider.css';
+@import './assets/theme1/custom-files/css-hpms/png-components/png-stepper.css';
+@import './assets/theme1/custom-files/css-hpms/png-components/png-table.css';
+@import './assets/theme1/custom-files/css-hpms/png-components/png-tabview.css';
+@import './assets/theme1/custom-files/css-hpms/png-components/png-timelines.css';
+@import './assets/theme1/custom-files/css-hpms/png-components/png-toast.css';
+@import './assets/theme1/custom-files/css-hpms/png-components/png-tooltip.css';
+
+@import './assets/theme1/custom-files/css-hpms/sidebar-menu/sidebar.css';
+
+@import './assets/theme1/custom-files/css-hpms/theme-files/beigeTheme.css';
+@import './assets/theme1/custom-files/css-hpms/theme-files/blueTheme.css';
+@import './assets/theme1/custom-files/css-hpms/theme-files/grayTheme.css';
+@import './assets/theme1/custom-files/css-hpms/theme-files/greenTheme.css';
+@import './assets/theme1/custom-files/css-hpms/theme-files/mauveTheme.css';
+@import './assets/theme1/custom-files/css-hpms/theme-files/purpleTheme.css';
+@import './assets/theme1/custom-files/css-hpms/theme-files/redTheme.css';
+@import './assets/theme1/custom-files/css-hpms/theme-files/tealTheme.css';
+@import './assets/theme1/custom-files/css-hpms/theme-files/yellowTheme.css';
+
+@import './assets/bootstrap/fonts/font-awesome-new/css/all.css';
+@import './assets/bootstrap/fonts/font-awesome-new/css/brands.css';
+@import './assets/bootstrap/fonts/font-awesome-new/css/fontawesome.css';
+@import './assets/bootstrap/fonts/font-awesome-new/css/regular.css';
+@import './assets/bootstrap/fonts/font-awesome-new/css/solid.css';
+@import './assets/bootstrap/fonts/font-awesome-new/css/svg-with-js.css';
+@import './assets/bootstrap/fonts/font-awesome-new/css/v4-shims.css';
+
+@import './assets/bootstrap/fonts/iconfont/material-icons.css';
+
+
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+
+:root {
+    --primaryclr: #1782cf;
+    --secondaryclr: #eef8ff;
+    --hoverclr: #2188ce;
+
+    --primary-clr-text: #1c415b;
+    --primary-clr-dark-text: #28324b;
+    --secondary-clr-text: #647f91;
+}

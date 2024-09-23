@@ -1,0 +1,184 @@
+<div class="png-dialog-content">
+  <div *ngIf="action == actions.delete" class="png-dialogbox-delete-alert">
+    <div class="delete-icon">
+      <i class="fas fa-exclamation-triangle"></i>
+      <h5>Delete</h5>
+    </div>
+    <p>Are you sure you want to delete this record from your list ?</p>
+  </div>
+
+  <form [formGroup]="rankForm" (ngSubmit)="handleRank()">
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="form-field-container">
+          <label class="form-field-label field-required">Title</label><br />
+          <input
+            type="text"
+            class="png-input-text"
+            formControlName="title"
+            pInputText
+            placeholder="Enter Title"
+          />
+          <p
+            *ngIf="
+              rankForm.get('title')?.invalid && rankForm.get('title')?.touched
+            "
+            class="error-message"
+          >
+            <i class="fas fa-exclamation-triangle"></i>
+            <span>Title is required</span>
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="form-field-container">
+          <label class="form-field-label">Description</label><br />
+          <textarea
+            class="png-input-textarea"
+            rows="1"
+            pInputTextarea
+            formControlName="description"
+            placeholder="Enter Description"
+          ></textarea>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="form-field-container">
+          <label class="form-field-label field-required">Rank Type</label>
+          <p-dropdown
+            class="png-dropdown"
+            appendTo="body"
+            formControlName="rankTypeId"
+            [options]="rankTypeList"
+            optionLabel="label"
+            optionValue="value"
+            [filter]="true"
+          >
+          </p-dropdown>
+          <p
+            *ngIf="
+              rankForm.get('rankTypeId')?.invalid &&
+              rankForm.get('rankTypeId')?.touched
+            "
+            class="error-message"
+          >
+            <i class="fas fa-exclamation-triangle"></i>
+            <span>Rank Type is required</span>
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="form-field-container">
+          <label class="form-field-label field-required">Organization</label>
+          <p-dropdown
+            class="png-dropdown"
+            appendTo="body"
+            formControlName="organizationTypeId"
+            [options]="organizationList"
+            optionLabel="label"
+            optionValue="value"
+            [filter]="true"
+          >
+          </p-dropdown>
+          <p
+            *ngIf="
+              rankForm.get('organizationTypeId')?.invalid &&
+              rankForm.get('organizationTypeId')?.touched
+            "
+            class="error-message"
+          >
+            <i class="fas fa-exclamation-triangle"></i>
+            <span>Organization is required</span>
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="form-field-container">
+          <label class="form-field-label field-required">Short Code</label
+          ><br />
+          <input
+            type="text"
+            class="png-input-text"
+            formControlName="shortCode"
+            pInputText
+            placeholder="Enter Short Code"
+          />
+          <p
+            *ngIf="
+              rankForm.get('shortCode')?.invalid &&
+              rankForm.get('shortCode')?.touched
+            "
+            class="error-message"
+          >
+            <i class="fas fa-exclamation-triangle"></i>
+            <span>Short Code is required</span>
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="form-field-container">
+          <label class="form-field-label field-required">Scale</label><br />
+          <input
+            type="number"
+            class="png-input-text"
+            formControlName="scale"
+            pInputText
+            placeholder="0"
+          />
+          <p
+            *ngIf="
+              rankForm.get('scale')?.invalid && rankForm.get('scale')?.touched
+            "
+            class="error-message"
+          >
+            <i class="fas fa-exclamation-triangle"></i>
+            <span>Scale is required</span>
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="form-field-container">
+          <label class="form-field-label field-required">Status</label>
+          <p-dropdown
+            class="png-dropdown"
+            appendTo="body"
+            formControlName="statusId"
+            [options]="statusList"
+            optionLabel="name"
+            optionValue="id"
+            [filter]="true"
+          >
+          </p-dropdown>
+          <p
+            *ngIf="
+              rankForm.get('statusId')?.invalid && rankForm.get('statusId')?.touched
+            "
+            class="error-message"
+          >
+            <i class="fas fa-exclamation-triangle"></i>
+            <span>Status is required</span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="png-dialog-no-header-footer">
+      <div class="png-dailogbox-footer justify-content-end px-4">
+        <button
+          pButton
+          type="button"
+          class="png-button png-button-outline"
+          label="{{ translate('Close') }}"
+          (click)="onClose()"
+        ></button>
+        <button
+          pButton
+          type="submit"
+          *ngIf="action !== actions.view"
+          [disabled]="rankForm.invalid"
+          class="png-button png-button-solid"
+          [label]="action || 'Add'"
+        ></button>
+      </div>
+    </div>
+  </form>
+</div>

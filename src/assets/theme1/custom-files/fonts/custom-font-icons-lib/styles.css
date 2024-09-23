@@ -1,0 +1,442 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "hpms-icons";
+  src:url("fonts/hpms-icons.eot");
+  src:url("fonts/hpms-icons.eot?#iefix") format("embedded-opentype"),
+    url("fonts/hpms-icons.woff") format("woff"),
+    url("fonts/hpms-icons.ttf") format("truetype"),
+    url("fonts/hpms-icons.svg#hpms-icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+[data-icon]:before {
+  font-family: "hpms-icons" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "hpms-icons" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-burger-menu:before {
+  content: "\61";
+}
+.icon-close:before {
+  content: "\62";
+}
+.icon-email:before {
+  content: "\63";
+}
+.icon-error:before {
+  content: "\64";
+}
+.icon-eye:before {
+  content: "\65";
+}
+.icon-random:before {
+  content: "\66";
+}
+.icon-user-management:before {
+  content: "\67";
+}
+.icon-username-icon:before {
+  content: "\68";
+}
+.icon-telephone-icon:before {
+  content: "\69";
+}
+.icon-setting-icon:before {
+  content: "\6a";
+}
+.icon-search-icon:before {
+  content: "\6b";
+}
+.icon-refresh-icon:before {
+  content: "\6c";
+}
+.icon-print-icon:before {
+  content: "\6d";
+}
+.icon-plus-icon:before {
+  content: "\6e";
+}
+.icon-password-icon:before {
+  content: "\6f";
+}
+.icon-passssword-view-icon:before {
+  content: "\70";
+}
+.icon-notification-icon:before {
+  content: "\71";
+}
+.icon-mail-website-icon:before {
+  content: "\72";
+}
+.icon-home-icon:before {
+  content: "\73";
+}
+.icon-help-icon:before {
+  content: "\74";
+}
+.icon-delete-icon:before {
+  content: "\75";
+}
+.icon-date-picker:before {
+  content: "\76";
+}
+.icon-bell-icon:before {
+  content: "\77";
+}
+.icon-3dots-icon:before {
+  content: "\78";
+}
+.icon-workflow-attribute:before {
+  content: "\79";
+}
+.icon-workflow:before {
+  content: "\7a";
+}
+.icon-user-management-1:before {
+  content: "\41";
+}
+.icon-role-management:before {
+  content: "\42";
+}
+.icon-rank-payscale:before {
+  content: "\43";
+}
+.icon-rank:before {
+  content: "\44";
+}
+.icon-project-team:before {
+  content: "\45";
+}
+.icon-payscale:before {
+  content: "\46";
+}
+.icon-organogram:before {
+  content: "\47";
+}
+.icon-organization:before {
+  content: "\48";
+}
+.icon-manage-project:before {
+  content: "\49";
+}
+.icon-manage-client:before {
+  content: "\4a";
+}
+.icon-items-classification:before {
+  content: "\4b";
+}
+.icon-item:before {
+  content: "\4c";
+}
+.icon-document-name:before {
+  content: "\4d";
+}
+.icon-country:before {
+  content: "\4e";
+}
+.icon-correspondence:before {
+  content: "\4f";
+}
+.icon-communication-channel:before {
+  content: "\50";
+}
+.icon-charges-profile:before {
+  content: "\51";
+}
+.icon-charges:before {
+  content: "\52";
+}
+.icon-bank:before {
+  content: "\53";
+}
+.icon-approval-hierarchy:before {
+  content: "\54";
+}
+.icon-application:before {
+  content: "\55";
+}
+.icon-anomaly:before {
+  content: "\56";
+}
+.icon-addons:before {
+  content: "\57";
+}
+.icon-create-shortcut:before {
+  content: "\58";
+}
+.icon-recovery:before {
+  content: "\59";
+}
+.icon-outgoing-letters:before {
+  content: "\5a";
+}
+.icon-incoming-letters:before {
+  content: "\30";
+}
+.icon-case-management:before {
+  content: "\31";
+}
+.icon-batches:before {
+  content: "\32";
+}
+.icon-cr:before {
+  content: "\33";
+}
+.icon-zero-issues:before {
+  content: "\34";
+}
+.icon-multiple-issues:before {
+  content: "\35";
+}
+.icon-minor-issues:before {
+  content: "\36";
+}
+.icon-insurance-provider:before {
+  content: "\37";
+}
+.icon-insurance-payment:before {
+  content: "\38";
+}
+.icon-insurance-contract:before {
+  content: "\39";
+}
+.icon-insurance-claim:before {
+  content: "\21";
+}
+.icon-insurance:before {
+  content: "\22";
+}
+.icon-rule-engine:before {
+  content: "\23";
+}
+.icon-procurement:before {
+  content: "\24";
+}
+.icon-package:before {
+  content: "\25";
+}
+.icon-manage-contracts:before {
+  content: "\26";
+}
+.icon-finance:before {
+  content: "\27";
+}
+.icon-customer-profile:before {
+  content: "\28";
+}
+.icon-mis-portal-icon:before {
+  content: "\29";
+}
+.icon-case-parameter:before {
+  content: "\2a";
+}
+.icon-bank-payment:before {
+  content: "\2b";
+}
+.icon-verified-icon:before {
+  content: "\2c";
+}
+.icon-profile-settings:before {
+  content: "\2d";
+}
+.icon-personal-info:before {
+  content: "\2e";
+}
+.icon-password-change:before {
+  content: "\2f";
+}
+.icon-customer-dashboard:before {
+  content: "\3a";
+}
+.icon-refund-request:before {
+  content: "\3b";
+}
+.icon-local-purchase-vendor:before {
+  content: "\3c";
+}
+.icon-case-close:before {
+  content: "\3d";
+}
+.icon-noc:before {
+  content: "\3e";
+}
+.icon-demand-working:before {
+  content: "\3f";
+}
+.icon-organization-group:before {
+  content: "\40";
+}
+.icon-group-payment:before {
+  content: "\5b";
+}
+.icon-documnet:before {
+  content: "\5d";
+}
+.icon-policy-icon:before {
+  content: "\5e";
+}
+.icon-head-office-icon:before {
+  content: "\5f";
+}
+.icon-duplicate-doc-icon:before {
+  content: "\60";
+}
+.icon-department-workflow-type-icon:before {
+  content: "\7b";
+}
+.icon-cash-sale-icon:before {
+  content: "\7c";
+}
+.icon-cases:before {
+  content: "\7d";
+}
+.icon-customer-protal:before {
+  content: "\7e";
+}
+.icon-customer-anomalies:before {
+  content: "\5c";
+}
+.icon-reports:before {
+  content: "\e000";
+}
+.icon-cases-report:before {
+  content: "\e001";
+}
+.icon-tablet-view:before {
+  content: "\e002";
+}
+.icon-mobile-view:before {
+  content: "\e003";
+}
+.icon-desktop-view:before {
+  content: "\e004";
+}
+.icon-mobile-view-new:before {
+  content: "\e005";
+}
+.icon-regular-closing:before {
+  content: "\e006";
+}
+.icon-rebate-card-policy:before {
+  content: "\e007";
+}
+.icon-price-list:before {
+  content: "\e008";
+}
+.icon-noc-serial-number:before {
+  content: "\e009";
+}
+.icon-noc-request:before {
+  content: "\e00a";
+}
+.icon-noc-block-list:before {
+  content: "\e00b";
+}
+.icon-list-of-values:before {
+  content: "\e00c";
+}
+.icon-instalment-calculator:before {
+  content: "\e00d";
+}
+.icon-event-template:before {
+  content: "\e00e";
+}
+.icon-event-log:before {
+  content: "\e00f";
+}
+.icon-early-closing-calculator:before {
+  content: "\e010";
+}
+.icon-early-closing:before {
+  content: "\e011";
+}
+.icon-department:before {
+  content: "\e012";
+}
+.icon-customer-cases:before {
+  content: "\e013";
+}
+.icon-customer-anomalies-1:before {
+  content: "\e014";
+}
+.icon-customer:before {
+  content: "\e015";
+}
+.icon-credit-card-policy:before {
+  content: "\e016";
+}
+.icon-closing-request:before {
+  content: "\e017";
+}
+.icon-bank-branches:before {
+  content: "\e018";
+}
+.icon-anomaly-1:before {
+  content: "\e019";
+}
+.icon-amortization-scheme:before {
+  content: "\e01a";
+}
+.icon-cash-sale-return:before {
+  content: "\e01b";
+}
+.icon-split-screen:before {
+  content: "\e01c";
+}
+.icon-small-view:before {
+  content: "\e01d";
+}
+.icon-side-view:before {
+  content: "\e01e";
+}
+.icon-full-screen:before {
+  content: "\e01f";
+}
+.icon-user-package-management:before {
+  content: "\e020";
+}
+.icon-payments:before {
+  content: "\e021";
+}
+.icon-insured-categories:before {
+  content: "\e022";
+}
+.icon-configuration:before {
+  content: "\e023";
+}
+.icon-city:before {
+  content: "\e024";
+}
+.icon-case-inquiry:before {
+  content: "\e025";
+}
+.icon-case-index-sheet:before {
+  content: "\e026";
+}
+.icon-insurance-cases-report:before {
+  content: "\e027";
+}

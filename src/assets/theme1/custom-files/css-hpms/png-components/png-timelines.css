@@ -1,0 +1,39 @@
+.png-timeline-custom .p-timeline {
+    /* // border: 1px solid red !important; */
+}
+.png-timeline-custom .p-timeline-event-opposite {
+    display: none;
+}
+.png-timeline-custom .p-timeline .p-timeline-event-marker {
+    border: 2px solid var(--primaryclr);
+}
+.png-timeline-custom .p-timeline .p-timeline-event-connector {
+    background: var(--primaryclr);
+}
+
+.png-timeline-title {
+    color: var(--primary-clr-text);
+    font-size: 16px;
+    font-family: "Poppins-SemiBold";
+    letter-spacing: 0.16px;
+    margin-bottom: 0px;
+}
+.png-timeline-sub-title {
+    color: var(--primary-clr-text);
+    font-size: 14px;
+    font-family: "Poppins-Regular";
+    letter-spacing: 0.16px;
+    margin-bottom: 6px;
+}
+.png-timeline-date {
+    color: var(--secondary-clr-text);
+    font-size: 14px;
+    font-family: "Poppins-Regular";
+    letter-spacing: 0.14px;
+}
+.png-timeline-description {
+    color: var(--secondary-clr-text);
+    font-size: 14px;
+    font-family: "Poppins-Regular";
+    letter-spacing: 0.14px;
+}

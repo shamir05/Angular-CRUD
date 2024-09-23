@@ -1,0 +1,14 @@
+.png-slider {
+    display: block;
+    /* height: 40px; */
+}
+.png-slider .p-slider.p-slider-horizontal {
+    margin-top: 19px !important;
+}
+
+.png-slider-with-input + .png-slider {
+    height: unset !important;
+}
+.png-slider-with-input + .png-slider .p-slider.p-slider-horizontal {
+    margin-top: unset !important;
+}

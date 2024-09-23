@@ -1,0 +1,181 @@
+@media only screen and (min-width: 768px) {
+    .png-tabview.png-tabview-vertical {
+        /* border: 1px solid red; */
+        display: block;
+    }
+    .png-tabview.png-tabview-vertical .p-tabview:not(.child-png-tabview-horizontal .p-tabview) {
+        /* border: 1px solid blue; */
+        display: flex;
+    }
+
+    .png-tabview.png-tabview-vertical
+        .p-tabview
+        > .p-tabview-nav-container:not(.child-png-tabview-horizontal .p-tabview > .p-tabview-nav-container) {
+        /* border: 1px solid darkgreen; */
+        width: 230px;
+        border-right: 1px solid #91a5c4;
+        margin-top: 20px;
+        margin-left: -20px;
+    }
+
+    .png-tabview.png-tabview-vertical
+        .p-tabview
+        > .p-tabview-nav-container
+        .p-tabview-nav-content
+        .p-tabview-nav:not(
+            .child-png-tabview-horizontal .p-tabview > .p-tabview-nav-container .p-tabview-nav-content .p-tabview-nav
+        ) {
+        flex-direction: column;
+    }
+
+    .png-tabview.png-tabview-vertical
+        .p-tabview
+        > .p-tabview-panels:not(.child-png-tabview-horizontal .p-tabview > .p-tabview-panels) {
+        /* border: 1px solid darkorange; */
+        width: calc(100% - 210px);
+        /* 230 was less now 210 because -20px add in left tab bar */
+    }
+
+    .png-tabview.png-tabview-vertical
+        .p-tabview-nav
+        li
+        .p-tabview-nav-link:not(.child-png-tabview-horizontal .p-tabview-nav li .p-tabview-nav-link) {
+        font-weight: 400;
+        font-family: "Poppins-Regular";
+        font-size: 16px;
+        color: var(--secondary-clr-text);
+        border-radius: 0;
+        text-decoration: none;
+        box-shadow: none;
+        border-bottom: 0;
+        border-left: 2px solid transparent;
+    }
+    .png-tabview.png-tabview-vertical
+        .p-tabview
+        .p-tabview-nav
+        li.p-highlight
+        .p-tabview-nav-link:not(
+            .child-png-tabview-horizontal .p-tabview .p-tabview-nav li.p-highlight .p-tabview-nav-link
+        ) {
+        background: #f2fbfc;
+        border-left: 2px solid var(--primaryclr) !important;
+        color: var(--primaryclr) !important;
+        border-color: var(--primaryclr) !important;
+        font-family: "Poppins-Medium";
+    }
+}
+.p-tabview .p-tabview-nav li .p-tabview-nav-link:not(.p-disabled):focus {
+    box-shadow: none !important;
+}
+
+.png-tabview .p-tabview .p-tabview-nav li .p-tabview-nav-link {
+    font-family: "Poppins-Regular";
+    font-weight: 400 !important;
+    font-size: 15px;
+    text-decoration: none;
+    color: var(--secondary-clr-text) !important;
+    white-space: nowrap;
+    /* max-width: 230px; */
+}
+.png-tabview-horizontal.png-tabview .p-tabview .p-tabview-nav li .p-tabview-nav-link,
+.child-png-tabview-horizontal .png-tabview .p-tabview .p-tabview-nav li .p-tabview-nav-link {
+    padding: 0.35rem 1.75rem !important;
+    letter-spacing: 0.45px;
+}
+
+.png-tabview-horizontal.png-tabview .png-tabview-vertical .p-tabview .p-tabview-nav li .p-tabview-nav-link {
+    padding: 1.25rem !important;
+}
+
+.png-tabview .p-tabview .p-tabview-nav li.p-highlight .p-tabview-nav-link {
+    border-color: var(--primaryclr) !important;
+    color: var(--primaryclr) !important;
+    font-family: "Poppins-Medium";
+}
+
+/* png tabview small box for weekdays moday to sunday  
+    added 16 JUNE 2023
+
+*/
+.png-tabview.png-tabview-smallboxes {
+    display: block;
+    margin-top: 20px;
+}
+.png-tabview.png-tabview-smallboxes
+    .p-tabview
+    .p-tabview-nav
+    li:not(.p-highlight):not(.p-disabled):hover
+    .p-tabview-nav-link,
+.png-tabview.png-tabview-smallboxes .p-tabview .p-tabview-nav li .p-tabview-nav-link {
+    padding: 0;
+    border-radius: 4px;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 16px;
+    border: 1px solid var(--primaryclr);
+    text-decoration: none;
+    color: var(--primaryclr);
+    font-size: 14px;
+    letter-spacing: 0.28px;
+    font-family: "Poppins-Regular";
+}
+
+.png-tabview.png-tabview-smallboxes .p-tabview .p-tabview-nav li.p-highlight .p-tabview-nav-link {
+    background: var(--primaryclr);
+    color: #fff !important;
+}
+
+.png-tabview.png-tabview-smallboxes .p-tabview .p-tabview-nav li.p-disabled .p-tabview-nav-link {
+    border: 1px solid #ababab;
+    color: #ababab;
+}
+
+.png-tabview.png-tabview-smallboxes .p-tabview .p-tabview-nav {
+    padding-bottom: 12px !important;
+    border-width: 0 0 1px 0 !important;
+}
+
+@media only screen and (max-width: 767px) {
+    .png-tabview .p-tabview .p-tabview-nav {
+        flex-wrap: wrap !important;
+        gap: 4px !important;
+        border: 0px !important;
+        background: #f7f7f7 !important;
+        padding: 8px !important;
+        border-radius: 8px;
+    }
+    .png-tabview-horizontal.png-tabview .p-tabview .p-tabview-nav li .p-tabview-nav-link,
+    .child-png-tabview-horizontal .png-tabview .p-tabview .p-tabview-nav li .p-tabview-nav-link,
+    .png-tabview .p-tabview .p-tabview-nav li .p-tabview-nav-link {
+        border: 1px solid #dee2e6 !important;
+        padding: 0.25rem 0.5rem !important;
+        margin-bottom: 1px !important;
+        font-size: 14px !important;
+        border-radius: 4px !important;
+    }
+}
+
+/* fixed tabs in POPUP at top of dialog 01 AUG 2023 */
+.png-tabview.tabs-fixed-dialogs .p-tabview-nav {
+    position: fixed;
+    /* top: 74px; */
+    padding-top: 12px;
+    left: 24px;
+    right: 24px;
+    z-index: 999;
+}
+.png-tabview.tabs-fixed-dialogs .p-tabview-panels {
+    margin-top: 60px;
+}
+
+.tab-required::after {
+    content: " *";
+    color: #d32f2f;
+    font-size: 1rem;
+    position: absolute;
+    margin-left: 0.5rem;
+    bottom: 1.5rem;
+}

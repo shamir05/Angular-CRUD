@@ -1,0 +1,156 @@
+.form-field-container {
+    margin-bottom: 16px;
+}
+
+.p-component {
+    font-family: "Poppins-Regular" !important;
+    font-size: 13px !important;
+}
+
+.field-required::after {
+    content: " *";
+    color: #d32f2f;
+    font-size: 16px;
+    position: absolute;
+    margin-left: 4px;
+    top: 0px;
+}
+
+.form-field-label {
+    color: var(--secondary-clr-text);
+    font-size: 13px;
+    font-family: "Poppins-Regular";
+    letter-spacing: 0.28px;
+    margin-bottom: 4px;
+}
+
+.p-autocomplete,
+.p-dropdown,
+.p-multiselect,
+.p-chips,
+.p-calendar,
+p-inputnumber,
+.p-inputnumber,
+.p-input-icon-left,
+.p-input-icon-right,
+.p-inputtext {
+    width: 100%;
+}
+
+.error-message {
+    letter-spacing: 0.22px;
+    color: #e12d39;
+    font-size: 12px;
+    font-family: "Poppins-Regular";
+    margin: 0;
+    margin-top: 4px;
+}
+
+.error-message i {
+    font-size: 12px;
+    margin-right: 2px;
+}
+
+.ng-invalid.ng-touched > .p-calendar .p-inputtext,
+.ng-invalid.ng-touched > .p-password .p-password-input,
+.ng-invalid.ng-touched > .p-calendar .p-datepicker-trigger,
+.ng-invalid.ng-touched > .p-calendar .p-datepicker-trigger:hover,
+.ng-invalid.ng-touched > .p-autocomplete .p-autocomplete-input,
+.ng-invalid.ng-touched > .p-selectbutton .p-button,
+.ng-invalid.ng-touched .ng-invalid.ng-touched > .p-dropdown,
+.ng-invalid.ng-touched > .p-inputnumber .p-inputnumber-input,
+.p-inputtext.ng-invalid.ng-touched {
+    border: 1px solid #f37079 !important;
+}
+
+.ng-invalid.ng-touched > .p-calendar .p-datepicker-trigger,
+.ng-invalid.ng-touched > .p-calendar .p-datepicker-trigger:hover {
+    border-left: 0 !important;
+}
+p-radiobutton.ng-dirty.ng-invalid > .p-radiobutton > .p-radiobutton-box {
+    border-color: #f37079;
+}
+.ng-invalid.ng-touched > .p-checkbox .p-checkbox-box {
+    border: 2px solid #f37079 !important;
+}
+
+.png-page-heading,
+.png-form-heading,
+.png-form-subheading {
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.png-form-heading {
+    justify-content: space-between;
+}
+
+.png-page-heading p.page-heading,
+.png-form-heading p.form-heading,
+.png-form-subheading p.form-subheading {
+    margin: 0px;
+}
+
+.page-heading,
+.png-page-heading p.page-heading {
+    font-size: 24px;
+    font-family: "Poppins-SemiBold";
+    color: var(--primary-clr-text);
+}
+
+.form-heading,
+.png-form-heading p.form-heading {
+    font-size: 18px;
+    font-family: "Poppins-medium";
+    color: var(--primary-clr-text);
+    display: flex;
+    align-items: center;
+}
+
+.form-subheading,
+.png-form-subheading p.form-subheading {
+    font-size: 16px;
+    font-family: "Poppins-medium";
+    color: var(--primary-clr-text);
+    display: flex;
+    align-items: center;
+}
+
+.form-field-inline-btn {
+    padding-top: 1.75rem;
+}
+
+/* readonly fields CSS added 05 Dec 2023 */
+
+.p-inputtext.p-component::-moz-read-only,
+textarea:-moz-read-only {
+    background: #f8fcff !important;
+    opacity: 0.6 !important;
+}
+
+.p-inputtext.p-component:read-only,
+textarea:read-only {
+    background: #f8fcff !important;
+    opacity: 0.6 !important;
+}
+#hijriDatePicker input.form-control:disabled,
+.p-disabled,
+.p-dropdown.p-component.p-disabled {
+    background: #f8fcff !important;
+    opacity: 0.6 !important;
+}
+.p-steps-item.p-disabled {
+    background: unset !important;
+}
+/* slots view in VHS issue is fixed  */
+.png-btn-slot:disabled {
+    opacity: unset !important;
+}
+
+/* p number with Buttons BG color issue fixed  add and remove buttons */
+.p-button.p-inputnumber-button:disabled {
+    background: var(--primaryclr) !important;
+}
+
+/* ended readonly fields CSS added 05 Dec 2023 */

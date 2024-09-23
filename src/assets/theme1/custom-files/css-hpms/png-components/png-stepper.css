@@ -1,0 +1,47 @@
+.png-card.stepper-header-steps {
+    border-bottom: 1px solid #efefef;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.png-card.png-stepper-content {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+.png-stepper-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.stepper-header-steps .p-steps .p-steps-item:first-child:before {
+    width: 50%;
+    left: 50%;
+}
+.stepper-header-steps .p-steps .p-steps-item:last-child:before {
+    width: 50%;
+    right: 50%;
+}
+
+.png-steps .p-steps .p-steps-item .p-menuitem-link:not(.p-disabled):focus {
+    box-shadow: none !important;
+}
+
+.png-steps .p-steps .p-steps-item.p-highlight .p-steps-number {
+    background-color: var(--primaryclr) !important;
+    border: 1px solid var(--primaryclr) !important;
+    color: #fff !important;
+}
+
+.png-steps .p-steps .p-steps-item .p-menuitem-link {
+    cursor: pointer;
+}
+.png-steps .p-steps .p-steps-item.p-steps-current .p-menuitem-link {
+    cursor: default;
+}
+.png-steps .p-steps .p-steps-item.p-highlight .p-steps-title {
+    font-weight: initial;
+    font-family: "Poppins-Medium";
+}

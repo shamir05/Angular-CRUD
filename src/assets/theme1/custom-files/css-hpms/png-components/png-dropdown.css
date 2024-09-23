@@ -1,0 +1,282 @@
+.png-dropdown .p-multiselect,
+.png-dropdown .p-dropdown {
+    border: 1px solid #1c415b80 !important;
+    border-radius: 4px !important;
+}
+
+.png-dropdown .p-multiselect .p-multiselect-label,
+.png-dropdown .p-dropdown .p-dropdown-label {
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+    color: var(--primary-clr-text) !important;
+    font-family: "Poppins-Medium" !important;
+    font-size: 13px !important;
+    letter-spacing: 0.28px;
+}
+
+.png-dropdown .p-dropdown-panel .p-dropdown-header {
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+}
+
+.png-dropdown .p-dropdown-filter {
+    border: 1px solid #1c415b80 !important;
+    color: var(--primary-clr-text) !important;
+    font-family: "Poppins-Medium" !important;
+    font-size: 13px !important;
+    border-radius: 4px !important;
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+    letter-spacing: 0.28px;
+}
+
+.png-dropdown .p-multiselect {
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.png-dropdown .p-multiselect .p-inputwrapper-filled .p-multiselect.p-multiselect-chip .p-multiselect-label {
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
+}
+.p-multiselect.p-multiselect-chip .p-multiselect-token {
+    padding: 0.275rem 0.75rem !important;
+}
+
+/* multi select images  */
+.p-multiselect-label {
+    display: flex !important;
+}
+.multiselect-item {
+    display: flex !important;
+    align-items: center !important;
+}
+
+/* calendars  */
+.png-calendar .p-calendar {
+    border-radius: 4px !important;
+    height: 40px;
+}
+.png-calendar .p-calendar .p-inputtext {
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+    color: var(--primary-clr-text) !important;
+    font-family: "Poppins-Medium" !important;
+    font-size: 13px !important;
+    letter-spacing: 0.28px;
+    border: 1px solid #1c415b80 !important;
+}
+
+.png-calendar .p-calendar .p-datepicker-trigger:hover,
+.png-calendar .p-calendar .p-datepicker-trigger {
+    border: 1px solid #1c415b80 !important;
+    background: #647f9114;
+    color: #647f91;
+}
+.png-calendar .p-calendar .p-datepicker-trigger {
+    border-left: 0 !important;
+}
+
+/* calendar custom css added to reduce the size and spaces 07 june 2023 */
+
+.p-datepicker table {
+    font-size: 13px !important;
+}
+
+.p-calendar .p-datepicker,
+.png-calendar .p-calendar .p-datepicker {
+    padding: 0 0.5rem !important;
+}
+
+.p-datepicker .p-datepicker-header .p-datepicker-title,
+.png-calendar .p-calendar .p-datepicker .p-datepicker-header .p-datepicker-title {
+    line-height: 1.25rem !important;
+}
+
+.p-datepicker table td,
+.p-datepicker table th,
+.png-calendar .p-calendar .p-datepicker table td,
+.png-calendar .p-calendar .p-datepicker table th {
+    padding: 0.25rem !important;
+    text-align: center !important;
+}
+
+.p-datepicker table th,
+.png-calendar .p-calendar .p-datepicker table th {
+    font-weight: 100;
+    font-family: "Poppins-Medium";
+}
+.p-datepicker table td > span,
+.png-calendar .p-calendar .p-datepicker table td > span {
+    width: 2rem !important;
+    height: 2rem !important;
+}
+
+.p-datepicker .p-datepicker-buttonbar,
+.p-calendar .p-datepicker .p-datepicker-buttonbar,
+.png-calendar .p-calendar .p-datepicker .p-datepicker-buttonbar {
+    padding: 0.25rem 0 !important;
+}
+.p-datepicker .p-datepicker-buttonbar .p-button {
+    padding: 0.25rem 1.25rem !important;
+    font-family: "Poppins-Regular";
+}
+.p-datepicker .p-datepicker-buttonbar .p-button .p-button-label {
+    color: #495057;
+}
+.p-datepicker .p-datepicker-header .p-datepicker-title .p-datepicker-year:enabled:hover,
+.p-datepicker .p-datepicker-header .p-datepicker-title .p-datepicker-month:enabled:hover {
+    color: var(--primaryclr) !important;
+}
+/* calendar custom css added to reduce the size and spaces 07 june 2023 ended */
+
+/* added css 30 may 2023  */
+/* css write for dropdown with images flags in phone number fields */
+.png-dropdown-images .selected-png-dropdown-item-images {
+    display: flex;
+    align-items: center;
+}
+
+.png-dropdown-images .selected-item-images img,
+.png-dropdown-images .selected-png-dropdown-item-images img {
+    width: 28px !important;
+}
+.png-dropdown-images .selected-png-dropdown-item-images div,
+.png-dropdown-images .selected-item-images div {
+    margin-left: 8px;
+}
+
+/* phone group control with dropdown flag and input number  */
+.group-phone {
+    display: flex !important;
+}
+
+.group-phone p-dropdown {
+    width: 50% !important;
+}
+
+.group-phone .p-dropdown-items-wrapper .p-dropdown-item > div {
+    display: flex !important;
+}
+
+/* split button looks like designed and used in HPMS Initiate Workflow DIALOGBOX / POPUP
+    21 JUNE 2023
+*/
+.vertical-text-seprator {
+    height: 20px;
+    border-right: 1px solid #ffffff;
+    margin: 4px 6px;
+    opacity: 0.26;
+    margin-left: 16px;
+}
+
+.label-with-png-dropdown {
+    background: var(--primaryclr) !important;
+    border: 1px solid var(--primaryclr) !important;
+    border-radius: 8px;
+    color: #fff;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    margin-left: 12px;
+}
+
+.label-with-png-dropdown .png-dropdown-primary .png-dropdown .p-dropdown {
+    background: var(--primaryclr) !important;
+    border: 0px solid var(--primaryclr) !important;
+}
+.label-with-png-dropdown .png-dropdown-primary .png-dropdown .p-dropdown .p-dropdown-label {
+    padding-top: 4px !important;
+    padding-bottom: 4px !important;
+    color: #fff !important;
+    font-family: "Poppins-Regular" !important;
+}
+
+.label-with-png-dropdown .png-dropdown-primary .png-dropdown .p-dropdown .p-dropdown-trigger {
+    width: 2rem !important;
+    color: #fff !important;
+    opacity: 0.5;
+}
+
+/* CSS Added for GROUP DROPDOWN FLAGS
+    04 july 2023 
+*/
+
+.group-phone .png-dropdown .p-dropdown {
+    border-top-right-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+}
+.group-phone .p-inputtext,
+.group-phone .p-inputnumber-input {
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+    border-left: 0px !important;
+}
+
+/* bug fixing of calendar on till 1366PX screen  */
+@media screen and (max-width: 1366px) {
+    .p-datepicker table td,
+    .p-datepicker table th,
+    .png-calendar .p-calendar .p-datepicker table td,
+    .png-calendar
+        .p-calendar
+        .p-datepicker
+        table
+        th
+        .p-datepicker
+        .p-datepicker-header
+        .p-datepicker-title
+        .p-datepicker-year,
+    .p-datepicker .p-datepicker-header .p-datepicker-title .p-datepicker-month,
+    .p-datepicker .p-datepicker-header,
+    .p-datepicker .p-datepicker-buttonbar,
+    .p-calendar .p-datepicker .p-datepicker-buttonbar,
+    .png-calendar .p-calendar .p-datepicker .p-datepicker-buttonbar {
+        padding: 0.125rem !important;
+    }
+    .p-datepicker .p-datepicker-header {
+        padding-bottom: 0.25rem !important;
+    }
+    .p-datepicker .p-datepicker-header .p-datepicker-prev,
+    .p-datepicker .p-datepicker-header .p-datepicker-next {
+        width: 1.5rem !important;
+        height: 1.5rem !important;
+    }
+    .p-datepicker .p-datepicker-buttonbar .p-button {
+        padding: 0.125rem 1.25rem !important;
+    }
+}
+
+/* dropdown arrow button width descrease for readability on SM screens  */
+.p-multiselect .p-multiselect-trigger,
+.p-dropdown .p-dropdown-trigger {
+    width: 2rem !important;
+}
+.p-multiselect .p-multiselect-trigger .p-icon,
+.p-dropdown .p-dropdown-trigger .p-dropdown-trigger-icon {
+    width: 0.75rem !important;
+    height: 0.75rem !important;
+}
+.p-dropdown .p-dropdown-clear-icon {
+    right: 2rem !important;
+    width: 0.75rem !important;
+    height: 0.75rem !important;
+    margin-top: -0.4rem !important;
+}
+
+/*----------  calendar only month picker  ----------*/
+.png-calendar.png-month-picker .p-inputtext.p-component:read-only {
+    background: unset !important;
+    opacity: unset !important;
+}
+.png-calendar.png-month-picker.readonly .p-inputtext.p-component:read-only {
+    background: #f8fcff !important;
+    opacity: 0.6 !important;
+}
+
+.pngDropdownMenu.p-menu {
+    width: unset !important;
+    min-width: 12.5rem !important;
+    max-width: 15rem !important;
+}

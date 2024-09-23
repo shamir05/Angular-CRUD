@@ -1,0 +1,120 @@
+.custom-profile-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.custom-profile-img {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 80px;
+    max-height: 80px;
+    background-color: #6eafd4;
+    border-radius: 100%;
+    position: relative;
+}
+
+.custom-profile-img img {
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+.inner {
+    background-color: #eeefef;
+    width: 24px;
+    height: 24px;
+    border-radius: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    box-shadow: 0px 3px 6px #2c3f501a;
+}
+
+.inputfile {
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: 1;
+    width: 40px;
+    height: 40px;
+}
+
+.inputfile + label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 0;
+}
+
+.inputfile + label .p-button-rounded {
+    cursor: pointer;
+    height: 1.5rem !important;
+    width: 1.5rem !important;
+}
+.inputfile + label .p-button-rounded .pi {
+    font-size: 10px;
+    color: #28324b;
+    cursor: pointer;
+}
+
+/* filupload simple button control 
+    08 JUEN 2023
+*/
+.png-button-simple-fileupload .p-button {
+    padding: 0.5rem 1.25rem;
+    font-size: 13px;
+    font-family: "Poppins-Medium";
+    letter-spacing: 0.42px;
+    text-transform: capitalize;
+    border-radius: 6px;
+    background: var(--primaryclr) !important;
+    /* background: transparent !important;
+    color: var(--primaryclr) !important; */
+    border: 1px solid var(--primaryclr) !important;
+    font-weight: 400;
+}
+.png-button-simple-fileupload .p-button .p-button-label {
+    font-weight: 200;
+}
+
+/* new add for file upload button in table  action buttons 09 aug 2023 */
+.png-table .p-datatable .p-datatable-tbody > tr > td .png-button-simple-fileupload .p-button {
+    padding: 0.25rem 0.35rem !important;
+}
+.png-table .p-datatable .png-button-simple-fileupload .p-button .p-button-label {
+    font-size: 12px !important;
+}
+.png-table .p-datatable .png-button-simple-fileupload .p-button .p-button-icon-left {
+    width: 0.75rem !important;
+    height: 0.75rem !important;
+}
+.png-button-simple-fileupload-name {
+    word-break: break-all;
+    line-height: 1.2em;
+    max-height: 3.6em;
+    overflow: hidden;
+}
+
+/*----------  File upload button full width  ----------*/
+
+/* Adjust the styles as needed */
+.custom-file-upload .p-fileupload-choose,
+.custom-file-upload .p-fileupload-choose-icon,
+.custom-file-upload .p-fileupload-upload {
+    background-color: transparent !important;
+    border: 2px dashed #0000000f !important; /* Change color as needed */
+    color: var(--primaryclr) !important; /* Change text color as needed */
+    cursor: pointer !important;
+    width: 100% !important;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.custom-file-upload.png-button-simple-fileupload .p-button .p-button-label {
+    flex: unset !important;
+}
+
+.custom-file-upload .p-fileupload-choose .pi {
+    font-size: 13px !important;
+}

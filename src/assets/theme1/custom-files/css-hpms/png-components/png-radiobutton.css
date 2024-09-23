@@ -1,0 +1,234 @@
+.radio-buttons-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.png-radio-button-item {
+    display: flex;
+    align-items: center;
+}
+
+.png-select-button .p-selectbutton .p-button .p-button-label {
+    font-weight: 400 !important;
+    font-family: "Poppins-Regular" !important;
+    font-size: 13px !important;
+    color: var(--primaryclr) !important;
+}
+.png-select-button .p-selectbutton .p-button.p-highlight {
+    background-color: var(--primaryclr) !important;
+}
+.png-select-button .p-selectbutton .p-button.p-highlight .p-button-label {
+    color: #fff !important;
+}
+
+.png-select-button .p-selectbutton .p-button.p-highlight:hover {
+    box-shadow: none !important;
+}
+
+.png-select-button .p-selectbutton {
+    display: flex !important;
+    height: 40px !important;
+}
+
+.png-select-button .p-selectbutton .p-button {
+    padding: 0.5rem !important;
+    min-width: 5rem;
+}
+
+.png-select-button .p-selectbutton .p-button {
+    border: 1px solid var(--primaryclr) !important;
+    box-shadow: none !important;
+}
+
+/* full width of parent columns  */
+.png-select-button.fullwidth .p-selectbutton .p-button {
+    flex: 1 1 auto;
+}
+
+/* added css 29 may 2023 */
+/* custom radio buttons */
+.png-radiobuttons-group-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+.png-radiobuttons-group-wrapper p-radiobutton {
+    border: 1px solid #647f91 !important;
+    padding: 0px 10px;
+    min-width: 120px;
+    border-radius: 4px;
+    /* height: 34px; */
+}
+
+.png-radiobuttons-group-wrapper p-radiobutton .p-radiobutton-label {
+    margin: 0;
+    margin-left: 8px;
+    font-family: "Poppins-Medium";
+    font-size: 13px;
+    color: var(--primary-clr-text);
+    letter-spacing: 0.28px;
+    cursor: pointer;
+}
+.png-radiobuttons-group-wrapper .selected {
+    background: #006cb714;
+    border: 1px solid var(--primaryclr) !important;
+}
+
+.png-radiobuttons-group-wrapper .p-radiobutton .p-radiobutton-box.p-highlight {
+    background: var(--primaryclr) !important;
+    border-color: var(--primaryclr) !important;
+}
+.png-radiobuttons-group-wrapper .p-radiobutton .p-radiobutton-box:not(.p-disabled):not(.p-highlight):hover {
+    border-color: var(--primaryclr) !important;
+}
+.png-radiobuttons-group-wrapper .p-radiobutton .p-radiobutton-box,
+.png-radiobuttons-group-wrapper .p-radiobutton {
+    width: 16px !important;
+    height: 16px !important;
+}
+
+.png-radiobuttons-group-wrapper.radiobuttons-vertical {
+    display: flex;
+    flex-direction: column;
+}
+
+/* custom radio button boxes LARGE size height increase 21 JUNE 2023 */
+.png-radiobuttons-group-wrapper.lg p-radiobutton {
+    height: 44px;
+}
+
+/* normal radio buttons css added 
+05 JULY 2023  */
+
+.png-radio-button .p-radiobutton .p-radiobutton-box.p-highlight {
+    border-color: var(--primaryclr) !important;
+    background: var(--primaryclr) !important;
+}
+.png-radio-button .p-radiobutton .p-radiobutton-box:not(.p-disabled).p-focus {
+    box-shadow: none !important;
+}
+.png-radio-button .p-radiobutton .p-radiobutton-box:not(.p-disabled):not(.p-highlight):hover {
+    border-color: var(--primaryclr) !important;
+}
+
+/* radio buttons DANGER red used for LOCK user screens  */
+
+.png-radio-button.danger .p-radiobutton .p-radiobutton-box.p-highlight {
+    border-color: #e12d39 !important;
+    background: #e12d39 !important;
+}
+.png-radio-button.danger .p-radiobutton .p-radiobutton-box:not(.p-disabled).p-focus {
+    box-shadow: none !important;
+}
+.png-radio-button.danger .p-radiobutton .p-radiobutton-box:not(.p-disabled):not(.p-highlight):hover {
+    border-color: #e12d39 !important;
+}
+
+/* custom group radio button click issues fixed 08 dec 2023  */
+.png-radiobuttons-group-wrapper p-radiobutton .p-radiobutton-label {
+    width: 100%;
+    min-height: 35px;
+    display: flex;
+    align-items: center;
+    margin-left: 0;
+    padding-left: 10px;
+    padding-right: 6px;
+}
+.png-radiobuttons-group-wrapper p-radiobutton {
+    padding: 0;
+    padding-left: 10px;
+}
+
+/* new radio buttons static group without loop same design  */
+.png-radiobuttons-group-static {
+    display: flex;
+    flex-wrap: wrap;
+}
+.png-radiobutton-static {
+    padding: 0;
+    padding-left: 10px;
+    margin-bottom: 0.5rem;
+    margin-right: 0.75rem;
+    border: 1px solid #647f91 !important;
+    min-width: 120px;
+    border-radius: 4px;
+}
+.png-radiobuttons-group-static .png-radiobutton-static:last-child {
+    margin-right: 0;
+}
+.png-radiobutton-static.selected {
+    background: #006cb714;
+    border: 1px solid var(--primaryclr) !important;
+}
+.png-radiobutton-static .p-radiobutton .p-radiobutton-box.p-highlight {
+    border-color: var(--primaryclr) !important;
+    background: var(--primaryclr) !important;
+}
+.png-radiobuttons-group-static .radiobuttonstatic-label {
+    width: 100%;
+    min-height: 35px;
+    display: flex;
+    align-items: center;
+    margin-left: 0;
+    padding-left: 10px;
+    padding-right: 6px;
+    margin-bottom: 0;
+    font-family: "Poppins-Medium";
+    font-size: 13px;
+    color: var(--primary-clr-text);
+    letter-spacing: 0.28px;
+    cursor: pointer;
+}
+.png-radiobuttons-group-static.flex-column .png-radiobutton-static {
+    margin-right: 0 !important;
+}
+
+/*=====  png-select-multiple-buttons-checks  ======*/
+
+.png-select-multiple-buttons-checks .p-selectbutton .p-button {
+    margin-right: 0.75rem !important;
+    border-radius: 1.5rem !important;
+    margin-bottom: 0.5rem !important;
+    padding: 0.5rem 1rem;
+    border: 1px solid #ced4da !important;
+    -webkit-border-radius: 1.5rem !important;
+    -moz-border-radius: 1.5rem !important;
+    -ms-border-radius: 1.5rem !important;
+    -o-border-radius: 1.5rem !important;
+}
+.png-select-multiple-buttons-checks .p-selectbutton .p-button .p-button-label {
+    font-weight: 400;
+    font-family: "Poppins-Regular";
+}
+.png-select-multiple-buttons-checks .p-selectbutton .p-button.p-highlight {
+    background-color: #e5f7f9 !important;
+    border: 1px solid var(--primaryclr) !important;
+    color: var(--primaryclr) !important;
+}
+.png-select-multiple-buttons-checks .p-selectbutton .p-button.p-highlight:before {
+    content: "\e909";
+    color: var(--primaryclr) !important;
+    padding: 0 6px 0 0;
+    font-family: primeicons;
+    font-weight: 900;
+}
+
+.direction-rtl .png-select-multiple-buttons-checks .p-selectbutton .p-button.p-highlight:before {
+    padding-right: 0 !important;
+    padding-left: 6px !important;
+}
+
+/*----------  new filter selection buttons   ----------*/
+
+.png-select-button.select-filter-btns .p-button {
+    margin-right: 10px !important;
+    border-radius: 20px !important;
+    -webkit-border-radius: 20px !important;
+    -moz-border-radius: 20px !important;
+    -ms-border-radius: 20px !important;
+    -o-border-radius: 20px !important;
+}
+.png-select-button.select-filter-btns .p-selectbutton {
+    height: 30px !important;
+}

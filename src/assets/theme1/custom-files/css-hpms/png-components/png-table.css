@@ -1,0 +1,269 @@
+.png-table .p-datatable .p-datatable-thead > tr > th,
+.png-table .p-datatable .p-datatable-tbody > tr > td {
+    padding: 0 0.5rem !important;
+    height: 55px;
+    /* border: 0; */
+}
+.png-table .p-datatable .p-datatable-thead > tr > th {
+    background-color: #ebf7fd !important;
+    border: 0;
+}
+.png-table .p-datatable .p-datatable-thead > tr > th:first-child,
+.png-table .p-datatable .p-datatable-tbody > tr > td:first-child {
+    padding-left: 1.25rem !important;
+}
+.png-table .p-datatable .p-datatable-thead > tr > th:last-child,
+.png-table .p-datatable .p-datatable-tbody > tr > td:last-child {
+    padding-right: 1.25rem !important;
+}
+
+.png-table .blockheader-with-text {
+    color: var(--primary-clr-text) !important;
+    font-size: 14px !important;
+    font-family: "Poppins-SemiBold" !important;
+    letter-spacing: 0.28px;
+    font-weight: 100;
+}
+
+.png-table .block-with-text {
+    font-size: 13px !important;
+    font-family: "Poppins-Regular";
+    color: var(--primary-clr-text) !important;
+    letter-spacing: 0.12px;
+    min-width: 6rem;
+}
+
+.png-table .p-paginator {
+    justify-content: end !important;
+}
+
+.png-table .p-paginator .p-dropdown {
+    border: 1px solid #d8dbe2;
+    border-radius: 20px;
+    height: 24px !important;
+    padding: 0px 3px;
+    min-width: 70px;
+}
+.png-table .p-dropdown .p-dropdown-panel {
+    z-index: 10000 !important;
+}
+
+.png-table .p-paginator .p-dropdown .p-dropdown-label,
+.png-table .p-paginator .p-dropdown .p-dropdown-trigger {
+    color: #7c99af;
+}
+.png-table .p-paginator .p-dropdown .p-dropdown-label,
+.png-table .p-paginator .p-dropdown .p-dropdown-trigger {
+    color: #7c99af;
+    width: 1.3rem;
+    padding-right: 7px;
+}
+.png-table .p-paginator .p-dropdown .p-dropdown-label {
+    padding: 0px 2px 0px 6px;
+    font-size: 13px;
+}
+
+.png-table-paginator {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-top: 20px;
+}
+
+.no-data-found {
+    text-align: center !important;
+}
+
+/* css added for UMS name initials  */
+.tableInitials {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+    font-size: 9px;
+    font-family: "Poppins-Regular";
+    line-height: initial !important;
+    letter-spacing: 0.3px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+.tableInitials:hover {
+    transform: scale(1.5);
+}
+
+.tableInitials.one {
+    background-color: #ccdfff;
+    color: #5e84c4;
+}
+
+.tableInitials.two {
+    background-color: #d0dae1;
+    color: #7d96a8;
+}
+
+.tableInitials.three {
+    background-color: #efe6ff;
+    color: #b58efb;
+}
+
+.tableInitials.four {
+    background-color: #d1eeef;
+    color: #6babae;
+}
+
+.tableInitials.five {
+    background-color: #d1e7fa;
+    color: #489eea;
+}
+
+.tableInitials.six {
+    background-color: #afffd7;
+    color: #46aca9;
+}
+
+.tableInitials.seven {
+    background-color: #ffe6e6;
+    color: #f27477;
+}
+
+.tableInitials.eight {
+    background-color: #fff0cc;
+    color: #cc8f00;
+}
+
+.tableInitials.nine {
+    background-color: #ffe6f7;
+    color: #fb76ce;
+}
+
+.tableInitials.ten {
+    background-color: #beffc4;
+    color: #5bbb75;
+}
+
+.signoutInitials.one {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+    font-size: 9px;
+    font-family: "Poppins-Medium";
+    background: #dcf3ff;
+    color: var(--primaryclr);
+    line-height: initial !important;
+}
+
+.png-card .png-table-container {
+    margin: 0 -20px;
+}
+
+.png-table .p-datatable .p-paginator-bottom {
+    border: 0;
+    /* margin: 0 16px; */
+}
+
+.png-table .p-paginator .p-paginator-first,
+.png-table .p-paginator .p-paginator-prev,
+.png-table .p-paginator .p-paginator-next,
+.png-table .p-paginator .p-paginator-last,
+.png-table .p-paginator .p-paginator-pages .p-paginator-page {
+    min-width: 1.5rem !important;
+    height: 1.5rem !important;
+}
+
+/* user box contain user img and name in tables css added 
+08 JUNE 2023 
+*/
+.userimg-name {
+    display: flex;
+    align-items: center;
+}
+.userimg-name div {
+    width: 40px;
+    height: 40px;
+    margin-right: 8px;
+    border-radius: 50%;
+    overflow: hidden;
+    min-width: 40px;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #dee0e2;
+    background: #dee0e2;
+}
+.userimg-name p {
+    margin: 0;
+}
+.userimg-name div img {
+    max-width: 100%;
+}
+
+.png-table-actions .png-button-rounded .pi-ellipsis-v {
+    font-size: 18px !important;
+    color: #88a8d8 !important;
+}
+/* user box contain user img and name in tables css ended 
+08 JUNE 2023 
+*/
+
+/* used with in tabs button above table */
+.png-table-top-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-bottom: 12px;
+}
+
+a.png-table-a-link {
+    cursor: pointer;
+    color: #007bff !important;
+}
+
+.p-paginator .p-paginator-pages .p-paginator-page.p-highlight {
+    background: var(--primaryclr) !important;
+    border-color: var(--primaryclr) !important;
+    color: #fff !important;
+}
+
+.png-table-container .p-dropdown-panel .p-dropdown-items .p-dropdown-item {
+    padding: 0.25rem 1.25rem;
+}
+
+.png-table-actions .png-button.png-button-solid,
+.png-table-actions .png-button.png-button-solid-danger,
+.png-table-actions .png-button.png-button-outline,
+.png-table-actions .png-button.png-button-outline-danger,
+.png-table-actions .png-button .p-button {
+    padding: 0.125rem 0.5rem !important;
+    border-radius: 2px !important;
+}
+
+/*=============================================
+=           TABLE WITH BORDERS 26 DEC             =
+=============================================*/
+.png-table .p-datatable.p-datatable-gridlines .p-datatable-thead > tr > th,
+.png-table .p-datatable.p-datatable-gridlines .p-datatable-tbody > tr > td {
+    border: 1px solid #e0e5e9;
+}
+
+/*----------  Pagination without Table  ----------*/
+.png-paginator-no-table .p-dropdown .p-dropdown-label {
+    padding: 0.25rem 0.75rem !important;
+}
+
+/*=====  Case Inquiry STEP 4 Case table last column ACTION made sticky  ======*/
+app-case-details > p-card select-table-simple .png-table-container .p-datatable-tbody > tr > td:last-child,
+app-case-details > p-card select-table-simple .png-table-container .p-datatable-thead > tr > th:last-child {
+    position: sticky;
+    right: 0;
+}
+app-case-details > p-card select-table-simple .png-table-container .p-datatable-tbody > tr > td:last-child {
+    background: #fff;
+}

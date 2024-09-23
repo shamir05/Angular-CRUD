@@ -1,0 +1,13 @@
+.png-tooltip.slots > .p-tooltip-text {
+    border: 1px solid #e12d39 !important;
+    color: var(--primaryclr) !important;
+    background-color: #fff !important;
+    font-size: 12px;
+    font-family: "Poppins-Medium";
+    border: 1px solid var(--primaryclr) !important;
+    min-width: 150px;
+    letter-spacing: 0.12px;
+}
+.png-tooltip.slots.p-tooltip.p-tooltip-top .p-tooltip-arrow {
+    border-top-color: var(--primaryclr) !important;
+}

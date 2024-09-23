@@ -1,0 +1,9 @@
+{
+  "baseUrl": "https://devbe.hive-worx.com:3005/",
+  "DrawingToolVersion": "0.0.2",
+  "XIGTCoreVersion": "0.0.2",
+  "umsApiEndPoint": "ums/",
+  "xigtApplicationId": 7,
+  "umsApplicationId": 1,
+  "applicationShortName": "ums"
+}
