@@ -5,6 +5,7 @@ import { CityFormComponent } from './city-form/city-form.component';
 import { DialogConfig } from '../utils/dialogForm.model';
 import { actions } from '../utils/actions';
 import { CityService } from '../Services/city.service';
+import { tableConfig } from '../configurations/table-configuration';
 
 
 @Component({
@@ -13,7 +14,7 @@ import { CityService } from '../Services/city.service';
   styleUrls: ['./city-list.component.scss'],
 })
 export class CityListComponent implements OnInit {
-  cityData: any = this.cityService.getCityWithSeverity();;
+  cityData: any = this.cityService.getCityWithSeverity();
 
   constructor(
     public dialogService: DialogService,
@@ -47,7 +48,7 @@ export class CityListComponent implements OnInit {
     return baseActions;
   };
 
-  tableConfig = {
+  tableConfig = new tableConfig({
     title: 'City',
     headers: [
       { field: 'cityName', header: 'City Name' },
@@ -57,18 +58,21 @@ export class CityListComponent implements OnInit {
       { field: 'inventoryStatus', header: 'Status', action:true},
       { field: 'actions', header: 'Action', action:true}
     ],
-    data: this.cityData,
-    rowActions: this.rowActions,
-    tableActions: [
-      { label: 'Search', styleClass: 'png-button png-button-outline' },
-      {
-        label: 'Add',
-        styleClass: 'png-button png-button-solid',
-        command: () => this.showCityForm({ action: actions.add }),
-      },
-    ],
-    clickable: true
-  };
+      data: this.cityData,
+      rowActions: this.rowActions,
+      tableActions: [
+        { label: 'Search', styleClass: 'png-button png-button-outline' },
+        {
+          label: 'Add',
+          styleClass: 'png-button png-button-solid',
+          command: () => this.showCityForm({ action: actions.add }),
+        },
+      ],
+      rowClickAction: false,
+      showCheckbox: false,
+      showRadioButton: true,
+      isCellEditable: true,
+  })
 
   showCityForm(rowData: any) {
     const dialogConfig = new DialogConfig(`${rowData.action} City`, rowData);

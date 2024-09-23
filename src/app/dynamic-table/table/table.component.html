@@ -20,13 +20,19 @@
         [paginator]="true"
         [showCurrentPageReport]="true"
         [rowsPerPageOptions]="paginatorOptions"
+        [(selection)]="selectedRows"
         [rows]="rowsPerPage"
+        (selectionChange)="onSelectionChange($event)"
         paginatorDropdownAppendTo="body"
         class="png-table"
       >
         <!-- Header -->
         <ng-template pTemplate="header" let-columns>
           <tr>
+            <th *ngIf="tableConfig.showCheckbox">
+              <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+            </th>
+            <th *ngIf="tableConfig.showRadioButton"></th>
             <th *ngFor="let col of columns">
               <div class="blockheader-with-text">
                 {{ col.header }}
@@ -36,9 +42,15 @@
         </ng-template>
 
         <!-- Body -->
-        <ng-template pTemplate="body" let-rowData let-columns="columns">
+        <ng-template pTemplate="body" let-rowData let-columns="columns" let-editing="editing">
           <tr>
-            <td *ngFor="let col of columns" (click)="col.field !== 'actions' && onClick(Eactions.edit, rowData)">
+            <td *ngIf="tableConfig.showCheckbox">
+              <p-tableCheckbox [value]="rowData" />
+            </td>
+            <td *ngIf="tableConfig.showRadioButton">
+                <p-tableRadioButton [value]="rowData" />
+            </td>
+            <td *ngFor="let col of columns" (click)="col.field !== 'actions' && onClick(Eactions.view, rowData)">
               <div *ngIf="!col.action" class="block-with-text">
                 {{ rowData[col.field] }}
               </div>
