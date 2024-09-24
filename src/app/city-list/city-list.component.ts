@@ -55,6 +55,7 @@ export class CityListComponent implements OnInit {
       { field: 'timeZone', header: 'Time Zone' },
       { field: 'countryName', header: 'Country Name' },
       { field: 'description', header: 'Description' },
+      { field: 'image', header: 'City Image', isImageUpload: true },
       { field: 'inventoryStatus', header: 'Status', action:true},
       { field: 'actions', header: 'Action', action:true}
     ],
@@ -69,8 +70,8 @@ export class CityListComponent implements OnInit {
         },
       ],
       rowClickAction: false,
-      showCheckbox: false,
-      showRadioButton: true,
+      showCheckbox: true,
+      showRadioButton: false,
       isCellEditable: true,
   })
 

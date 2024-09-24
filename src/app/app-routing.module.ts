@@ -11,9 +11,9 @@ import { PageNotFoundComponent } from './404-page/page-not-found/page-not-found.
 const routes: Routes = [
   {path: '', component: LoginComponent},
   {path: 'home', component: NavComponent, canActivate: [AuthGuard], children: [
-    {path: '', component: OrganizationListComponent},
+    {path: '', component: CityListComponent},
     {path: 'rank-list', component: RankListComponent},
-    {path: 'city-list', component: CityListComponent},
+    {path: 'organization-list', component: OrganizationListComponent},
   ]},
   {path: '**', component: PageNotFoundComponent},
 ];

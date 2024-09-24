@@ -1,18 +1,23 @@
 <p-card styleClass="png-card">
-    <div class="png-card-header">
-      <h3 class="png-card-title">{{ tableConfig.title || 'Table' }}</h3>
-      <div class="png-card-header-content align-items-start">
-        <div class="png-card-header-btns">
-          <ng-container *ngFor="let action of tableConfig.tableActions">
-            <button pButton pRipple [label]="action.label ?? ''" [class]="action.styleClass || 'png-button png-button-solid'"
-              (click)="onActionTriggered(action.label ?? '')"></button>
-          </ng-container>
-        </div>
+  <div class="png-card-header">
+    <h3 class="png-card-title">{{ tableConfig.title || "Table" }}</h3>
+    <div class="png-card-header-content align-items-start">
+      <div class="png-card-header-btns">
+        <ng-container *ngFor="let action of tableConfig.tableActions">
+          <button
+            pButton
+            pRipple
+            [label]="action.label ?? ''"
+            [class]="action.styleClass || 'png-button png-button-solid'"
+            (click)="onActionTriggered(action.label ?? '')"
+          ></button>
+        </ng-container>
       </div>
     </div>
-    
-    <div class="png-card-body">
-      <div class="png-table-container">
+  </div>
+
+  <div class="png-card-body">
+    <div class="png-table-container">
       <p-table
         [columns]="tableConfig.headers"
         [value]="tableConfig.data"
@@ -42,29 +47,96 @@
         </ng-template>
 
         <!-- Body -->
-        <ng-template pTemplate="body" let-rowData let-columns="columns" let-editing="editing">
+        <ng-template
+          pTemplate="body"
+          let-rowData
+          let-columns="columns"
+          let-editing="editing"
+        >
           <tr>
             <td *ngIf="tableConfig.showCheckbox">
               <p-tableCheckbox [value]="rowData" />
             </td>
             <td *ngIf="tableConfig.showRadioButton">
-                <p-tableRadioButton [value]="rowData" />
+              <p-tableRadioButton [value]="rowData" />
             </td>
-            <td *ngFor="let col of columns" (click)="col.field !== 'actions' && onClick(Eactions.view, rowData)">
-              <div *ngIf="!col.action" class="block-with-text">
-                {{ rowData[col.field] }}
+            <td
+              *ngFor="let col of columns"
+              (click)="
+                col.field !== 'actions' && onClick(Eactions.view, rowData)
+              "
+              [pEditableColumn]="rowData"
+              [pEditableColumnField]="col.field"
+            >
+              <ng-container
+                *ngIf="tableConfig.isCellEditable && col.field !== 'actions'; else nonEditable"
+              >
+                <p-cellEditor>
+                  <ng-template pTemplate="input">
+                    <input
+                      pInputText
+                      type="text"
+                      [(ngModel)]="rowData[col.field]"
+                    />
+                  </ng-template>
+                  <ng-template pTemplate="output">
+                    <div
+                      *ngIf="!col.action && !col.isImageUpload"
+                      class="block-with-text"
+                    >
+                      {{ rowData[col.field] }}
+                    </div>
+                  </ng-template>
+                </p-cellEditor>
+              </ng-container>
+              <ng-template #nonEditable>
+                <div
+                  *ngIf="!col.action && !col.isImageUpload"
+                  class="block-with-text"
+                >
+                  {{ rowData[col.field] }}
+                </div>
+              </ng-template>
+              <div *ngIf="col.isImageUpload">
+                <ng-container *ngIf="!rowData[col.field]">
+                  <p-fileUpload
+                    mode="basic"
+                    name="image"
+                    chooseIcon="pi pi-upload"
+                    accept="image/*"
+                    [auto]="true"
+                    chooseLabel="Browse"
+                    (onSelect)="onFileSelect($event, rowData, col.field)"
+                    (click)="stopEvent($event)"
+                  ></p-fileUpload>
+                </ng-container>
+                <ng-container *ngIf="rowData[col.field]">
+                  <img
+                    [src]="rowData[col.field]"
+                    alt="Uploaded Image"
+                    style="max-width: 100px; max-height: 100px"
+                  />
+                </ng-container>
               </div>
+
               <!-- Conditional display for Status column -->
-              <div *ngIf="col.field === 'inventoryStatus' && col.action" class="block-with-text">
+              <div
+                *ngIf="col.field === 'inventoryStatus' && col.action"
+                class="block-with-text"
+              >
                 <p-tag
                   *ngIf="rowData[col.field]"
                   [value]="rowData[col.field]"
                   class="png-tag"
                   [severity]="rowData.severity"
+                  (click)="stopEvent($event)"
                 ></p-tag>
               </div>
               <!-- Conditional display for Action column -->
-              <div *ngIf="col.field === 'actions' && col.action" class="text-center">
+              <div
+                *ngIf="col.field === 'actions' && col.action"
+                class="text-center"
+              >
                 <div class="png-table-actions">
                   <button
                     (click)="menu.toggle($event)"
@@ -87,6 +159,6 @@
           </tr>
         </ng-template>
       </p-table>
-      </div>
     </div>
-  </p-card>
+  </div>
+</p-card>

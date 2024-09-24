@@ -35,6 +35,8 @@ import { NavComponent } from './landing-page/nav/nav.component';
 import { PageNotFoundComponent } from './404-page/page-not-found/page-not-found.component';
 import { TableComponent } from './dynamic-table/table/table.component';
 import { FormComponent } from './shared/reusable-form/form/form.component';
+import { FileUploadModule } from 'primeng/fileupload';
+
 
 
 
@@ -73,6 +75,7 @@ import { FormComponent } from './shared/reusable-form/form/form.component';
     MessagesModule,
     InputTextModule,
     PasswordModule,
+    FileUploadModule,
   ],
   providers: [
     DialogService,

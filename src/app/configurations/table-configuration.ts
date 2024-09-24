@@ -20,5 +20,5 @@ export class tableConfig {
         this.showCheckbox = tableData.showCheckbox,
         this.showRadioButton = tableData.showRadioButton,
         this.isCellEditable = tableData.isCellEditable
-  }
+    }
 }
