@@ -58,7 +58,7 @@ export class CityListComponent implements OnInit {
   tableConfig = new tableConfig({
     title: 'City',
     headers: [
-      { field: 'cityName', header: 'City Name' },
+      { field: 'cityName', header: 'City Name', editable: true },
       { field: 'timeZone', header: 'Time Zone' },
       { field: 'country', header: 'Country Name' },
       { field: 'description', header: 'Description' },
@@ -77,7 +77,6 @@ export class CityListComponent implements OnInit {
         },
       ],
       showCheckbox: true,
-      isCellEditable: true,
       showRadioButton: false,
   })
 
