@@ -109,7 +109,7 @@ export class CityListComponent implements OnInit {
   }  
   // Helper function to get the country name by ID
     country = (countryId: string): string => {
-    const countryName = country_name_list.find(item => item.id === countryId);
+    const countryName = country_name_list.find(item => item.country === countryId);
     return countryName ? countryName.country : 'Unknown';
   }
 

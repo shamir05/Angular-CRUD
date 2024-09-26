@@ -44,10 +44,20 @@ export class TableComponent implements OnInit {
     if (file) {
       const reader = new FileReader();
       reader.onload = (e: any) => {
-        rowData[field] = e.target.result;
+        rowData[field] = file.name;  // Update the image with the new one
       };
       reader.readAsDataURL(file);
     }
+  }
+  
+  getFileName(fileUrl: string): string {
+    // Assuming the URL has the file name at the end after the last "/"
+    return fileUrl.substring(fileUrl.lastIndexOf('/') + 1);
+  }
+
+  removeImage(rowData: any, field: string) {
+    // Reset the field to allow a new image to be selected
+    rowData[field] = null;
   }
 
   stopEvent(event: Event): void {

@@ -71,7 +71,8 @@
                     (click)="stopEvent($event)"></p-fileUpload>
                 </ng-container>
                 <ng-container *ngIf="rowData[col.field]">
-                  <img [src]="rowData[col.field]" alt="Uploaded Image" style="max-width: 100px; max-height: 100px" />
+                  <span>{{ rowData[col.field] }}</span>
+                  <button pButton icon="pi pi-times" class="remove-image-button" (click)="removeImage(rowData, col.field)"></button>
                 </ng-container>
               </div>
 

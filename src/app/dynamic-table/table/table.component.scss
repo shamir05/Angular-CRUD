@@ -1,0 +1,46 @@
+.image-upload-wrapper {
+    position: relative;
+  }
+  
+  .image-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .uploaded-image {
+    max-width: 100px;
+    max-height: 100px;
+  }
+  
+  .file-name-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .remove-image-button {
+    margin-left: 10px;
+    background-color: transparent;
+    border: none;
+    color: red;
+    font-size: 14px;
+    cursor: pointer;
+  }
+
+//   .remove-image-button {
+//     position: relative;
+//     top: -26px;
+//     right: 10px;
+//     background-color: red;
+//     border-radius: 20px;
+//     border: none;
+//     color: white;
+//     padding: 9px;
+//     cursor: pointer;
+//     width: 19px;
+//     height: 19px;
+//   }
+  .remove-image-button:hover{
+    background-color: transparent;
+    color: red;
+  }
+  

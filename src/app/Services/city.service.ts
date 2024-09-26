@@ -28,8 +28,6 @@ export class CityService {
         endPoint = apiEndPoints.deleteCity
         payLoad = {cityId: formData.cityId}
       }
-      debugger;
       return this.http.post<CityResponse>(`${this.cityUrl}${endPoint}`, payLoad)
   }
-
 }
