@@ -19,6 +19,7 @@ import { status_list } from '../utils/statusList';
 })
 export class CityListComponent implements OnInit {
   cityData: any = [];
+
   constructor(
     public dialogService: DialogService,
     private ref: DynamicDialogRef,
@@ -26,7 +27,8 @@ export class CityListComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.getCity()
+    this.getCity();
+
   }
 
   rowActions = (rowData: any): MenuItem[] => {
@@ -74,9 +76,9 @@ export class CityListComponent implements OnInit {
           command: () => this.showCityForm({ action: actions.add }),
         },
       ],
-      showCheckbox: false,
+      showCheckbox: true,
       isCellEditable: true,
-      showRadioButton: true,
+      showRadioButton: false,
   })
 
   showCityForm(rowData: any) {
@@ -116,5 +118,4 @@ export class CityListComponent implements OnInit {
     const status = status_list.find(item => item.id === statusId);
     return status ? { name: status.name, severity: status.severity } : { name: 'Unknown', severity: 'info' };
   }
-
 }

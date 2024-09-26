@@ -36,7 +36,8 @@ import { PageNotFoundComponent } from './404-page/page-not-found/page-not-found.
 import { TableComponent } from './dynamic-table/table/table.component';
 import { FormComponent } from './shared/reusable-form/form/form.component';
 import { FileUploadModule } from 'primeng/fileupload';
-
+import { CityViewComponent } from './city-list/city-view/city-view.component';
+import { DialogModule } from 'primeng/dialog';
 
 
 
@@ -54,6 +55,7 @@ import { FileUploadModule } from 'primeng/fileupload';
     PageNotFoundComponent,
     TableComponent,
     FormComponent,
+    CityViewComponent,
   ],
   imports: [
     BrowserModule,
@@ -66,6 +68,7 @@ import { FileUploadModule } from 'primeng/fileupload';
     TagModule,
     MenuModule,
     DynamicDialogModule,
+    DialogModule,
     BrowserAnimationsModule,
     NgbModule,
     FormsModule,

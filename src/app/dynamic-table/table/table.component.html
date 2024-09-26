@@ -12,6 +12,8 @@
             (click)="onActionTriggered(action.label ?? '')"
           ></button>
         </ng-container>
+          <p-button (onClick)="showDialog()" class="png-button" label="View Selected" />
+          <app-city-view [selectedRows]="selectedRows" [(visible)]="visible"></app-city-view>
       </div>
     </div>
   </div>
@@ -58,7 +60,7 @@
               <p-tableCheckbox [value]="rowData" />
             </td>
             <td *ngIf="tableConfig.showRadioButton">
-              <p-tableRadioButton [value]="rowData" />
+              <p-tableRadioButton [value]="rowData"/>
             </td>
             <td
               *ngFor="let col of columns"

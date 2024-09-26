@@ -9,6 +9,8 @@ import { actions } from 'src/app/utils/actions';
 export class TableComponent implements OnInit {
   Eactions: any = actions;
   selectedRows: any[] = [];
+  visible: boolean = false;
+
 
   ngOnInit(): void {}
 
@@ -16,10 +18,7 @@ export class TableComponent implements OnInit {
   @Input() paginatorOptions: number[] = [10, 20, 50];
   @Input() rowsPerPage: number = 10;
 
-  @Output() actionTriggered = new EventEmitter<{
-    action: string;
-    rowData?: any;
-  }>();
+  @Output() actionTriggered = new EventEmitter<{action: string; rowData?: any}>();
 
   onActionTriggered(action: string, rowData?: any) {
     this.actionTriggered.emit({ action, rowData });
@@ -49,5 +48,9 @@ export class TableComponent implements OnInit {
   stopEvent(event: Event): void {
     event.stopPropagation();
   } 
+
+  showDialog(){
+    this.visible = true;
+  }
 
 }

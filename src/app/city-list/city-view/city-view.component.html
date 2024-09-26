@@ -1,0 +1,60 @@
+<p-dialog header="Cities List" [modal]="true" [(visible)]="visible" [style]="{ width: '70rem' }" (onHide)="hideDialog()">
+    
+    <div *ngIf="selectedRows.length > 0; else noSelectedRow">
+        <div *ngFor="let city of selectedRows; let i = index">
+            <div class="container-fluid mb-4">
+            <h5>City #{{ i + 1 }}</h5> <!-- Displaying City #No starting from 1 -->
+    
+            <div class="row">
+            <!-- City Name and Time Zone -->
+            <div class="col-md-4 mb-3">
+                <div class="form-group">
+                <label for="cityName" class="font-semibold">City Name</label>
+                <input pInputText class="png-input-text" disabled [value]="city.cityName" /> <!-- Increased size -->
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="form-group">
+                <label for="timeZone" class="font-semibold">Time Zone</label>
+                <input pInputText class="png-input-text" disabled [value]="city.timeZone" /> <!-- Increased size -->
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="form-group">
+                <label for="country" class="font-semibold">Country</label>
+                <input pInputText class="png-input-text" disabled [value]="city.country" /> <!-- Increased size -->
+                </div>
+            </div>
+            </div>
+    
+            <div class="row">
+            <!--Description -->
+            <div class="col-md-4 mb-3">
+                <div class="form-group">
+                <label for="description" class="font-semibold">Description</label>
+                <input pInputText class="png-input-text" disabled [value]="city.description" /> <!-- Increased size -->
+                </div>
+            </div>
+            <!-- Status -->
+            <div class="col-md-4 mb-3">
+                <div class="form-group">
+                <label for="status" class="font-semibold">Status</label>
+                <input pInputText class="png-input-text" disabled [value]="city.status" /> <!-- Increased size -->
+                </div>
+            </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+        <ng-template #noSelectedRow>
+            <div>
+                <h2>No Row Selected</h2>
+            </div>
+    </ng-template>
+  
+    <!-- Cancel Button -->
+    <div class="flex justify-content-end gap-2">
+      <p-button label="Cancel" severity="secondary" (onClick)="hideDialog()"></p-button>
+    </div>
+  </p-dialog>
