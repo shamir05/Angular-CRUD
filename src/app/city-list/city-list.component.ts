@@ -78,6 +78,7 @@ export class CityListComponent implements OnInit {
       ],
       showCheckbox: true,
       showRadioButton: false,
+      coloumnClickAction: true,
   })
 
   showCityForm(rowData: any) {

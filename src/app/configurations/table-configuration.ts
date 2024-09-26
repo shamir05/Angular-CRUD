@@ -5,9 +5,9 @@ export class tableConfig {
   rowActions:any;
   tableActions:any;
   rowClickAction:boolean = false;
+  coloumnClickAction:boolean = false;
   showCheckbox:boolean = false;
   showRadioButton:boolean = false;
-  isCellEditable:boolean = false;
 
 
   constructor(tableData:Partial<tableConfig> = {}){

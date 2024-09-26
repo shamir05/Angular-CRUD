@@ -54,15 +54,12 @@ export class CityFormComponent implements OnInit {
     if (this.cityData) {
       const selectedCountry = this.country_name_list.find(country => country.country === this.cityData.country);
       const selectedStatus = this.status_list.find(status => status.name === this.cityData.status);
-        console.log(`Data coming in city data is: ${this.cityData.country}`)
         this.cityForm.patchValue({
           ...this.cityData,
           cityId: this.cityData.cityId,
           country: selectedCountry,
           status: selectedStatus
     })
-      // this.cityForm.controls['country'].setValue(this.cityData?.country.id);
-      // this.cityForm.controls['status'].setValue(this.cityData?.status.id);
     }
       if (this.action === actions.view || this.action === actions.delete) {
       this.cityForm.disable();

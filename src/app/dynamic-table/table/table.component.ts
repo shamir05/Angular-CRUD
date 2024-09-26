@@ -24,9 +24,14 @@ export class TableComponent implements OnInit {
     this.actionTriggered.emit({ action, rowData });
   }
   
-  onClick(action: string, rowData:any){
+  onClick(action: any, rowData: any, header: string){
     if(this.tableConfig?.rowClickAction){
     this.actionTriggered.emit({action, rowData})
+    }
+    else if(this.tableConfig?.coloumnClickAction)
+    {
+      console.log('Column Header:', header);
+      console.log('Row Data:', rowData);
     }
   }
 
