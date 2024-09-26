@@ -5,7 +5,10 @@ import {
   DynamicDialogConfig,
   DynamicDialogRef,
 } from 'primeng/dynamicdialog';
+import { CityService } from 'src/app/Services/city.service';
 import { actions } from 'src/app/utils/actions';
+import { country_name_list } from 'src/app/utils/countryNames';
+import { status_list } from 'src/app/utils/statusList';
 
 @Component({
   selector: 'app-city-form',
@@ -17,28 +20,24 @@ export class CityFormComponent implements OnInit {
   action = this.config.data?.action || '';
   cityForm: FormGroup;
   formData = {
+    cityId: [null],
     cityName: ['', Validators.required],
     timeZone: ['', Validators.required],
-    countryName: ['', Validators.required],
+    country: ['', Validators.required],
     description: [''],
-    inventoryStatus: ['', Validators.required],
+    status: ['', Validators.required],
   };
   cityData = this.config.data?.rowData;
 
-  country_name_list = [{ name: 'Pakistan' }, { name: 'Pakistan 2' }];
-  status_list = [
-    { name: 'Draft' },
-    { name: 'Suspended' },
-    { name: 'Inactive' },
-    { name: 'Active' },
-  ];
-
+  country_name_list = country_name_list;
+  status_list = status_list;
   // for closeing on close button
   constructor(
     public dialogService: DialogService,
     public config: DynamicDialogConfig,
     private ref: DynamicDialogRef,
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private cityService: CityService,
   ) {
     this.cityForm = this.fb.group({
       ...this.formData,
@@ -53,11 +52,20 @@ export class CityFormComponent implements OnInit {
   
   loadData() {
     if (this.cityData) {
-      this.cityForm.patchValue({
-        ...this.cityData,
-        countryName: this.country_name_list.find(country => country.name === this.cityData.countryName) || null,
-        inventoryStatus: this.status_list.find(status => status.name === this.cityData.inventoryStatus) || null
-      });
+      const selectedCountry = this.country_name_list.find(country => country.country === this.cityData.country);
+      const selectedStatus = this.status_list.find(status => status.name === this.cityData.status);
+        console.log(`Data coming in city data is: ${this.cityData.country}`)
+        this.cityForm.patchValue({
+          ...this.cityData,
+          cityId: this.cityData.cityId,
+          country: selectedCountry,
+          status: selectedStatus
+    })
+      // this.cityForm.controls['country'].setValue(this.cityData?.country.id);
+      // this.cityForm.controls['status'].setValue(this.cityData?.status.id);
+    }
+      if (this.action === actions.view || this.action === actions.delete) {
+      this.cityForm.disable();
     }
   }
 
@@ -68,4 +76,18 @@ export class CityFormComponent implements OnInit {
   translate(label: any) {
     return label;
   }
+
+  handleCity(){
+    const payLoad = {
+      ...this.cityForm.value
+    }
+      this.cityService.handleCity(payLoad, this.action).subscribe((res)=>{
+          if(res){
+            console.log(`City Added Successfully ${res}`)
+            this.ref.close(true)
+          }
+      })
+    
+  }
+
 }

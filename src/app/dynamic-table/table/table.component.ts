@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { actions } from 'src/app/utils/actions';
 
 @Component({
@@ -6,9 +6,11 @@ import { actions } from 'src/app/utils/actions';
   templateUrl: './table.component.html',
   styleUrls: ['./table.component.scss'],
 })
-export class TableComponent {
+export class TableComponent implements OnInit {
   Eactions: any = actions;
   selectedRows: any[] = [];
+
+  ngOnInit(): void {}
 
   @Input() tableConfig: any;
   @Input() paginatorOptions: number[] = [10, 20, 50];
@@ -47,4 +49,5 @@ export class TableComponent {
   stopEvent(event: Event): void {
     event.stopPropagation();
   } 
+
 }

@@ -1,62 +1,35 @@
 import { Injectable } from '@angular/core';
 import { status_list } from '../utils/statusList';
+import { HttpClient } from '@angular/common/http';
+import { actions } from '../utils/actions';
+import { apiEndPoints, cityUrl } from '../utils/api-endpoints';
+import { Observable } from 'rxjs';
+import { CityResponse } from '../Interfaces/city.interface';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CityService {
-
-  constructor() {}
-  
-  cityData = [
-    {
-      cityName: 'Rawalpindi',
-      timeZone: 'GMT+5',
-      countryName: 'Pakistan',
-      description: 'CSD HPBC ONLINE SHOP RAWALPIND',
-      inventoryStatus: 'Draft',
-    },
-    {
-      cityName: 'Rawalpindi',
-      timeZone: 'GMT+5',
-      countryName: 'Pakistan',
-      description: 'CSD HPBC ONLINE SHOP RAWALPIND',
-      inventoryStatus: 'Active',
-    },
-    {
-      cityName: 'Islamabad',
-      timeZone: 'GMT+5',
-      countryName: 'Pakistan',
-      description: 'CSD HPBC ONLINE SHOP Islamabad',
-      inventoryStatus: 'Inactive',
-    },
-    {
-      cityName: 'Islamabad',
-      timeZone: 'GMT+5',
-      countryName: 'Pakistan',
-      description: 'CSD HPBC ONLINE SHOP Islamabad',
-      inventoryStatus: 'Suspended',
-    },
-    {
-      cityName: 'Peshawar',
-      timeZone: 'GMT+6',
-      countryName: 'Pakistan 2',
-      description: 'CSD HPBC ONLINE SHOP Peshawar',
-      inventoryStatus: 'Active',
-    },
-  ];
-
-  // Method to map the cityData and include the severity
-  getCityWithSeverity() {
-    return this.cityData.map((city) => {
-      const status = status_list.find(
-        (s) => s.name === city.inventoryStatus
-      );
-      return {
-        ...city,
-        severity: status?.severity || '', // Assign severity or empty string if not found
-      };
-    });
+  cityUrl = cityUrl
+  constructor(private http: HttpClient) {}
+  handleCity(formData:any, action?:string):Observable<CityResponse>{
+      let endPoint = apiEndPoints.findCity
+      let payLoad = formData;
+      if(action === actions.add) 
+        {
+          endPoint = apiEndPoints.addCity
+        }
+      else if(action === actions.edit) 
+      {
+        endPoint = apiEndPoints.updateCity
+        payLoad = {...formData, cityId: formData.cityId}
+      }
+      else if(action === actions.delete) {
+        endPoint = apiEndPoints.deleteCity
+        payLoad = {cityId: formData.cityId}
+      }
+      debugger;
+      return this.http.post<CityResponse>(`${this.cityUrl}${endPoint}`, payLoad)
   }
 
 }

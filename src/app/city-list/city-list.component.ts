@@ -6,6 +6,10 @@ import { DialogConfig } from '../utils/dialogForm.model';
 import { actions } from '../utils/actions';
 import { CityService } from '../Services/city.service';
 import { tableConfig } from '../configurations/table-configuration';
+import { CityResponse } from '../Interfaces/city.interface';
+import { map } from 'rxjs';
+import { country_name_list } from '../utils/countryNames';
+import { status_list } from '../utils/statusList';
 
 
 @Component({
@@ -14,15 +18,16 @@ import { tableConfig } from '../configurations/table-configuration';
   styleUrls: ['./city-list.component.scss'],
 })
 export class CityListComponent implements OnInit {
-  cityData: any = this.cityService.getCityWithSeverity();
-
+  cityData: any = [];
   constructor(
     public dialogService: DialogService,
     private ref: DynamicDialogRef,
     private cityService: CityService
   ) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.getCity()
+  }
 
   rowActions = (rowData: any): MenuItem[] => {
     
@@ -38,7 +43,7 @@ export class CityListComponent implements OnInit {
     ];
 
     // Add "Delete" action only if the status is not "Active"
-    if (rowData.inventoryStatus !== 'Active') {
+    if (rowData.status !== 'Active') {
       baseActions.push({
         label: 'Delete',
         command: () => this.showCityForm({ action: actions.delete, rowData }),
@@ -53,10 +58,10 @@ export class CityListComponent implements OnInit {
     headers: [
       { field: 'cityName', header: 'City Name' },
       { field: 'timeZone', header: 'Time Zone' },
-      { field: 'countryName', header: 'Country Name' },
+      { field: 'country', header: 'Country Name' },
       { field: 'description', header: 'Description' },
       { field: 'image', header: 'City Image', isImageUpload: true },
-      { field: 'inventoryStatus', header: 'Status', action:true},
+      { field: 'status', header: 'Status', action:true},
       { field: 'actions', header: 'Action', action:true}
     ],
       data: this.cityData,
@@ -69,10 +74,9 @@ export class CityListComponent implements OnInit {
           command: () => this.showCityForm({ action: actions.add }),
         },
       ],
-      rowClickAction: false,
-      showCheckbox: true,
-      showRadioButton: false,
+      showCheckbox: false,
       isCellEditable: true,
+      showRadioButton: true,
   })
 
   showCityForm(rowData: any) {
@@ -80,5 +84,37 @@ export class CityListComponent implements OnInit {
     this.ref = this.dialogService.open(CityFormComponent, {
       ...dialogConfig,
     });
+    this.ref.onClose.subscribe((result: boolean) => {
+      if (result) this.getCity();
+    });
   }
+
+  getCity() {
+    let payLoad = {}
+    this.cityService.handleCity(payLoad).subscribe((response: CityResponse) => {
+      console.log(response.cities);  // Check how the data is structured
+
+      if (response && response.cities) {
+        this.cityData = response.cities.map(city => ({
+          ...city,
+          country: this.country(city.country),
+          status: this.status(city.status).name,
+          severity: this.status(city.status).severity
+        }))
+        this.tableConfig.data = this.cityData;
+      }
+    });
+  }  
+  // Helper function to get the country name by ID
+    country = (countryId: string): string => {
+    const countryName = country_name_list.find(item => item.id === countryId);
+    return countryName ? countryName.country : 'Unknown';
+  }
+
+  // Helper function to get the status name by ID
+  status = (statusId: number): { name: string, severity: string } => {
+    const status = status_list.find(item => item.id === statusId);
+    return status ? { name: status.name, severity: status.severity } : { name: 'Unknown', severity: 'info' };
+  }
+
 }

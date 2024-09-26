@@ -69,7 +69,13 @@
               [pEditableColumnField]="col.field"
             >
               <ng-container
-                *ngIf="tableConfig.isCellEditable && col.field !== 'actions'; else nonEditable"
+                *ngIf="
+                  tableConfig.isCellEditable &&
+                    col.field !== 'actions' &&
+                    col.field !== 'image' &&
+                    col.field !== 'status';
+                  else nonEditable
+                "
               >
                 <p-cellEditor>
                   <ng-template pTemplate="input">
@@ -105,7 +111,7 @@
                     chooseIcon="pi pi-upload"
                     accept="image/*"
                     [auto]="true"
-                    chooseLabel="Browse"
+                    chooseLabel="upload"
                     (onSelect)="onFileSelect($event, rowData, col.field)"
                     (click)="stopEvent($event)"
                   ></p-fileUpload>
@@ -121,7 +127,7 @@
 
               <!-- Conditional display for Status column -->
               <div
-                *ngIf="col.field === 'inventoryStatus' && col.action"
+                *ngIf="col.field === 'status' && col.action"
                 class="block-with-text"
               >
                 <p-tag

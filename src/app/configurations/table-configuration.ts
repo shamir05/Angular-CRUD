@@ -10,15 +10,7 @@ export class tableConfig {
   isCellEditable:boolean = false;
 
 
-  constructor(tableData:any){
-        this.title = tableData.title,
-        this.headers = tableData.headers,
-        this.data = tableData.data,
-        this.rowActions = tableData.rowActions,
-        this.tableActions = tableData.tableActions,
-        this.rowClickAction = tableData.rowClickAction,
-        this.showCheckbox = tableData.showCheckbox,
-        this.showRadioButton = tableData.showRadioButton,
-        this.isCellEditable = tableData.isCellEditable
+  constructor(tableData:Partial<tableConfig> = {}){
+        Object.assign(this, tableData)
     }
 }
