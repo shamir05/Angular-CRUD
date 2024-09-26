@@ -10,6 +10,7 @@ import { CityResponse } from '../Interfaces/city.interface';
 import { map } from 'rxjs';
 import { country_name_list } from '../utils/countryNames';
 import { status_list } from '../utils/statusList';
+import { CITY_TABLE_HEADERS } from '../utils/city-table-header';
 
 
 @Component({
@@ -55,30 +56,23 @@ export class CityListComponent implements OnInit {
     return baseActions;
   };
 
+  tableActions = [
+    { label: 'Search', styleClass: 'png-button png-button-outline' },
+    {
+      label: 'Add',
+      styleClass: 'png-button png-button-solid',
+      command: () => this.showCityForm({ action: actions.add }),
+    },
+  ]
+
   tableConfig = new tableConfig({
-    title: 'City',
-    headers: [
-      { field: 'cityName', header: 'City Name', editable: true },
-      { field: 'timeZone', header: 'Time Zone' },
-      { field: 'country', header: 'Country Name' },
-      { field: 'description', header: 'Description' },
-      { field: 'image', header: 'City Image', isImageUpload: true },
-      { field: 'status', header: 'Status', action:true},
-      { field: 'actions', header: 'Action', action:true}
-    ],
+      title: 'City',
+      headers: CITY_TABLE_HEADERS,
       data: this.cityData,
       rowActions: this.rowActions,
-      tableActions: [
-        { label: 'Search', styleClass: 'png-button png-button-outline' },
-        {
-          label: 'Add',
-          styleClass: 'png-button png-button-solid',
-          command: () => this.showCityForm({ action: actions.add }),
-        },
-      ],
+      tableActions: this.tableActions,
       showCheckbox: true,
-      showRadioButton: false,
-      coloumnClickAction: true,
+      columnClickAction: true,
   })
 
   showCityForm(rowData: any) {

@@ -5,7 +5,7 @@ export class tableConfig {
   rowActions:any;
   tableActions:any;
   rowClickAction:boolean = false;
-  coloumnClickAction:boolean = false;
+  columnClickAction:boolean = false;
   showCheckbox:boolean = false;
   showRadioButton:boolean = false;
 

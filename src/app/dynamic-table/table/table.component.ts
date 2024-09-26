@@ -28,7 +28,7 @@ export class TableComponent implements OnInit {
     if(this.tableConfig?.rowClickAction){
     this.actionTriggered.emit({action, rowData})
     }
-    else if(this.tableConfig?.coloumnClickAction)
+    else if(this.tableConfig?.columnClickAction)
     {
       console.log('Column Header:', header);
       console.log('Row Data:', rowData);
