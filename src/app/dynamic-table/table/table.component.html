@@ -45,7 +45,8 @@
             <td *ngIf="tableConfig.showRadioButton">
               <p-tableRadioButton [value]="rowData" />
             </td>
-            <td *ngFor="let col of columns" (click)=" col.field !== 'actions' && onClick(Eactions.view, rowData)" [pEditableColumn]="col.field" pEditableColumnField="field">
+            <td *ngFor="let col of columns" (click)=" col.field !== 'actions' && onClick(Eactions.view, rowData)" 
+            [pEditableColumn]="col.field" pEditableColumnField="field">
               <ng-container *ngIf="col.editable">
                 <p-cellEditor>
                   <ng-template pTemplate="input">
